@@ -10,7 +10,7 @@
 
 // When deployed on GitHub Pages, CSVs are accessible via relative path.
 // In development, point these to the raw GitHub URLs if needed.
-const DATA_BASE = '../data';
+const DATA_BASE = './data';
 const APPSTORE_CSV_URL = `${DATA_BASE}/appstore_weekly.csv`;
 const TRUSTPILOT_CSV_URL = `${DATA_BASE}/trustpilot_weekly.csv`;
 const REDDIT_CSV_URL = `${DATA_BASE}/reddit_weekly.csv`;

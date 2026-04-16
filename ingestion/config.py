@@ -72,7 +72,7 @@ HARM_TERMS = frozenset([
 import os
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA_DIR = os.path.join(REPO_ROOT, "data")
+DATA_DIR = os.path.join(REPO_ROOT, "docs", "data")
 APPSTORE_CSV = os.path.join(DATA_DIR, "appstore_weekly.csv")
 TRUSTPILOT_CSV = os.path.join(DATA_DIR, "trustpilot_weekly.csv")
 REDDIT_CSV = os.path.join(DATA_DIR, "reddit_weekly.csv")

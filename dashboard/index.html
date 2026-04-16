@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Companion Narrative Shift Tracker — monitoring how users talk about AI companion apps over time, tracking benefit and harm language patterns.">
+    <title>AI Companion Narrative Shift Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Ambient animated background -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header id="header">
+            <div class="header-badge">
+                <span class="pulse-dot"></span>
+                <span>LIVE — Auto-updates weekly</span>
+            </div>
+            <h1>AI Companion <span class="gradient-text">Narrative Shift</span> Tracker</h1>
+            <p class="subtitle">
+                Monitoring how users talk about AI companion apps over time.<br>
+                Tracking whether narrative shifts around <strong>harm</strong>, <strong>dependency</strong>, 
+                and <strong>benefit</strong> appear before or after major public incidents.
+            </p>
+            <div class="target-apps">
+                <span class="app-chip" data-app="character_ai">Character.AI</span>
+                <span class="app-chip" data-app="replika">Replika</span>
+                <span class="app-chip" data-app="pi">Pi</span>
+                <span class="app-chip" data-app="woebot">Woebot</span>
+            </div>
+        </header>
+
+        <!-- Stats Overview Cards -->
+        <section id="stats-overview" class="stats-grid">
+            <div class="stat-card" id="stat-total-reviews">
+                <div class="stat-icon">📊</div>
+                <div class="stat-value" id="total-reviews-value">—</div>
+                <div class="stat-label">Total Reviews Tracked</div>
+            </div>
+            <div class="stat-card stat-benefit" id="stat-avg-benefit">
+                <div class="stat-icon">💚</div>
+                <div class="stat-value" id="avg-benefit-value">—</div>
+                <div class="stat-label">Avg Benefit Rate</div>
+            </div>
+            <div class="stat-card stat-harm" id="stat-avg-harm">
+                <div class="stat-icon">🔴</div>
+                <div class="stat-value" id="avg-harm-value">—</div>
+                <div class="stat-label">Avg Harm Rate</div>
+            </div>
+            <div class="stat-card" id="stat-weeks-tracked">
+                <div class="stat-icon">📅</div>
+                <div class="stat-value" id="weeks-tracked-value">—</div>
+                <div class="stat-label">Weeks Tracked</div>
+            </div>
+        </section>
+
+        <!-- App Store Section -->
+        <section id="appstore-section" class="chart-section">
+            <div class="section-header">
+                <h2>
+                    <span class="section-icon">📱</span>
+                    App Store Reviews
+                </h2>
+                <p>iOS App Store review sentiment over time</p>
+            </div>
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>Net Sentiment Over Time</h3>
+                    <p class="chart-desc">Benefit rate minus harm rate — positive means more benefit language</p>
+                    <div class="chart-wrapper">
+                        <canvas id="appstore-sentiment-chart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Benefit vs Harm Rates</h3>
+                    <p class="chart-desc">Percentage of reviews containing benefit or harm keywords</p>
+                    <div class="chart-wrapper">
+                        <canvas id="appstore-rates-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-card full-width">
+                <h3>Weekly Review Volume</h3>
+                <p class="chart-desc">Number of reviews collected per app per week</p>
+                <div class="chart-wrapper">
+                    <canvas id="appstore-volume-chart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reddit Section -->
+        <section id="reddit-section" class="chart-section">
+            <div class="section-header">
+                <h2>
+                    <span class="section-icon">💬</span>
+                    Reddit Community Discourse
+                </h2>
+                <p>Subreddit sentiment and engagement trends</p>
+            </div>
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>Net Sentiment Over Time</h3>
+                    <p class="chart-desc">Community sentiment across target subreddits</p>
+                    <div class="chart-wrapper">
+                        <canvas id="reddit-sentiment-chart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Sentiment Velocity</h3>
+                    <p class="chart-desc">Week-over-week sentiment change — spikes indicate rapid narrative shifts</p>
+                    <div class="chart-wrapper">
+                        <canvas id="reddit-velocity-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-card full-width">
+                <h3>Community Volume (Posts + Comments)</h3>
+                <p class="chart-desc">Total engagement per subreddit per week</p>
+                <div class="chart-wrapper">
+                    <canvas id="reddit-volume-chart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodology -->
+        <section id="methodology" class="methodology-section">
+            <h2>Methodology</h2>
+            <div class="method-grid">
+                <div class="method-card">
+                    <h3>📥 Data Collection</h3>
+                    <p>App Store reviews via Apple RSS feeds (up to 250/app/week). Reddit posts and comments via PRAW API. Automated weekly via GitHub Actions.</p>
+                </div>
+                <div class="method-card">
+                    <h3>🏷️ Classification</h3>
+                    <p>Dictionary-based keyword matching. <strong>Benefit terms:</strong> support, helpful, anxiety, loneliness, comfort, grief. <strong>Harm terms:</strong> addicted, manipulative, dependent, obsessed, unsafe, self-harm.</p>
+                </div>
+                <div class="method-card">
+                    <h3>📐 Metrics</h3>
+                    <p><strong>Benefit/Harm Rate:</strong> % of texts with ≥1 matching term. <strong>Net Sentiment:</strong> benefit_rate − harm_rate. <strong>Velocity:</strong> week-over-week net sentiment change.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p>AI Companion Narrative Shift Tracker &middot; Data updates every Monday at 06:00 UTC</p>
+            <p class="footer-sub">Built with Chart.js &middot; Powered by GitHub Actions &middot; <a href="https://github.com" id="repo-link">View Source</a></p>
+        </footer>
+    </div>
+
+    <!-- No-data overlay (shown when CSVs are empty) -->
+    <div id="no-data-overlay" class="no-data-overlay hidden">
+        <div class="no-data-content">
+            <div class="no-data-icon">🚀</div>
+            <h2>Awaiting First Data Collection</h2>
+            <p>The pipeline hasn't run yet. Trigger the GitHub Action manually or wait for the next scheduled Monday run.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

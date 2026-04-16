@@ -12,6 +12,7 @@
 // In development, point these to the raw GitHub URLs if needed.
 const DATA_BASE = '../data';
 const APPSTORE_CSV_URL = `${DATA_BASE}/appstore_weekly.csv`;
+const TRUSTPILOT_CSV_URL = `${DATA_BASE}/trustpilot_weekly.csv`;
 const REDDIT_CSV_URL = `${DATA_BASE}/reddit_weekly.csv`;
 
 // Color palette for chart lines/bars
@@ -84,25 +85,28 @@ async function fetchCSV(url) {
 // Stats Computation
 // ============================================================
 
-function computeStats(appstoreData, redditData) {
+function computeStats(appstoreData, trustpilotData, redditData) {
     const totalReviews = appstoreData.reduce((sum, r) => sum + (r.review_count || 0), 0);
+    const totalTrustpilot = trustpilotData.reduce((sum, r) => sum + (r.review_count || 0), 0);
     const totalRedditPosts = redditData.reduce((sum, r) => sum + (r.post_count || 0) + (r.comment_count || 0), 0);
 
-    const avgBenefit = appstoreData.length > 0
-        ? (appstoreData.reduce((sum, r) => sum + (r.benefit_rate || 0), 0) / appstoreData.length * 100).toFixed(1)
+    const allReviewData = [...appstoreData, ...trustpilotData];
+    const avgBenefit = allReviewData.length > 0
+        ? (allReviewData.reduce((sum, r) => sum + (r.benefit_rate || 0), 0) / allReviewData.length * 100).toFixed(1)
         : '—';
 
-    const avgHarm = appstoreData.length > 0
-        ? (appstoreData.reduce((sum, r) => sum + (r.harm_rate || 0), 0) / appstoreData.length * 100).toFixed(1)
+    const avgHarm = allReviewData.length > 0
+        ? (allReviewData.reduce((sum, r) => sum + (r.harm_rate || 0), 0) / allReviewData.length * 100).toFixed(1)
         : '—';
 
     const weeks = new Set([
         ...appstoreData.map(r => r.week),
+        ...trustpilotData.map(r => r.week),
         ...redditData.map(r => r.week),
     ]).size;
 
     return {
-        totalReviews: totalReviews + totalRedditPosts,
+        totalReviews: totalReviews + totalTrustpilot + totalRedditPosts,
         avgBenefit: avgBenefit === '—' ? '—' : `${avgBenefit}%`,
         avgHarm: avgHarm === '—' ? '—' : `${avgHarm}%`,
         weeksTracked: weeks || '—',
@@ -331,23 +335,24 @@ function buildRedditVolumeChart(canvasId, data) {
 async function init() {
     console.log('[Tracker] Loading data...');
 
-    const [appstoreData, redditData] = await Promise.all([
+    const [appstoreData, trustpilotData, redditData] = await Promise.all([
         fetchCSV(APPSTORE_CSV_URL),
+        fetchCSV(TRUSTPILOT_CSV_URL),
         fetchCSV(REDDIT_CSV_URL),
     ]);
 
-    console.log(`[Tracker] App Store rows: ${appstoreData.length}, Reddit rows: ${redditData.length}`);
+    console.log(`[Tracker] App Store: ${appstoreData.length}, Trustpilot: ${trustpilotData.length}, Reddit: ${redditData.length}`);
 
-    // Show no-data overlay if both are empty
+    // Show no-data overlay if all are empty
     const overlay = document.getElementById('no-data-overlay');
-    if (appstoreData.length === 0 && redditData.length === 0) {
+    if (appstoreData.length === 0 && trustpilotData.length === 0 && redditData.length === 0) {
         overlay?.classList.remove('hidden');
         return;
     }
     overlay?.classList.add('hidden');
 
     // Update stats
-    const stats = computeStats(appstoreData, redditData);
+    const stats = computeStats(appstoreData, trustpilotData, redditData);
     updateStatsUI(stats);
 
     // Build App Store charts
@@ -355,6 +360,13 @@ async function init() {
         buildLineChart('appstore-sentiment-chart', appstoreData, 'app', 'net_sentiment', APP_COLORS, 'Net Sentiment');
         buildDualRateChart('appstore-rates-chart', appstoreData, 'app', APP_COLORS);
         buildBarChart('appstore-volume-chart', appstoreData, 'app', 'review_count', APP_COLORS);
+    }
+
+    // Build Trustpilot charts
+    if (trustpilotData.length > 0) {
+        buildLineChart('trustpilot-sentiment-chart', trustpilotData, 'app', 'net_sentiment', APP_COLORS, 'Net Sentiment');
+        buildDualRateChart('trustpilot-rates-chart', trustpilotData, 'app', APP_COLORS);
+        buildBarChart('trustpilot-volume-chart', trustpilotData, 'app', 'review_count', APP_COLORS);
     }
 
     // Build Reddit charts

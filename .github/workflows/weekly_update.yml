@@ -27,11 +27,10 @@ jobs:
       - name: Run App Store ingestion
         run: python -m ingestion.appstore_rss
 
-      - name: Run Reddit ingestion
-        env:
-          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
-          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
-          REDDIT_USER_AGENT: "AI-Companion-Tracker/1.0 (GitHub Actions)"
+      - name: Run Trustpilot ingestion
+        run: python -m ingestion.trustpilot
+
+      - name: Run Reddit ingestion (public JSON, no API key)
         run: python -m ingestion.reddit_api
 
       - name: Commit and push updated data

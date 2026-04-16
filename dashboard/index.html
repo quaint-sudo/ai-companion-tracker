@@ -95,6 +95,40 @@
             </div>
         </section>
 
+        <!-- Trustpilot Section -->
+        <section id="trustpilot-section" class="chart-section">
+            <div class="section-header">
+                <h2>
+                    <span class="section-icon">⭐</span>
+                    Trustpilot Reviews
+                </h2>
+                <p>Trustpilot review sentiment over time</p>
+            </div>
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h3>Net Sentiment Over Time</h3>
+                    <p class="chart-desc">Benefit rate minus harm rate across Trustpilot reviews</p>
+                    <div class="chart-wrapper">
+                        <canvas id="trustpilot-sentiment-chart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>Benefit vs Harm Rates</h3>
+                    <p class="chart-desc">Percentage of Trustpilot reviews containing benefit or harm keywords</p>
+                    <div class="chart-wrapper">
+                        <canvas id="trustpilot-rates-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-card full-width">
+                <h3>Weekly Review Volume</h3>
+                <p class="chart-desc">Number of Trustpilot reviews collected per app per week</p>
+                <div class="chart-wrapper">
+                    <canvas id="trustpilot-volume-chart"></canvas>
+                </div>
+            </div>
+        </section>
+
         <!-- Reddit Section -->
         <section id="reddit-section" class="chart-section">
             <div class="section-header">
@@ -135,7 +169,7 @@
             <div class="method-grid">
                 <div class="method-card">
                     <h3>📥 Data Collection</h3>
-                    <p>App Store reviews via Apple RSS feeds (up to 250/app/week). Reddit posts and comments via PRAW API. Automated weekly via GitHub Actions.</p>
+                    <p>App Store reviews via Apple RSS feeds (up to 250/app/week). Trustpilot reviews via web scraping. Reddit posts via public JSON feeds. All automated weekly via GitHub Actions — zero API keys required.</p>
                 </div>
                 <div class="method-card">
                     <h3>🏷️ Classification</h3>

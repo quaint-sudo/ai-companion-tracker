@@ -24,18 +24,30 @@ APP_STORE_RSS_TEMPLATE = (
 APP_STORE_MAX_PAGES = 5
 
 # =============================================================================
-# Reddit Configuration
+# Trustpilot Configuration
+# =============================================================================
+# Trustpilot business page slugs for each target app
+TRUSTPILOT_SLUGS = {
+    "character_ai": "character.ai",
+    "replika": "replika.ai",
+    "pi": "pi.ai",
+    "woebot": "woebothealth.com",
+}
+
+TRUSTPILOT_BASE_URL = "https://www.trustpilot.com/review/{slug}"
+TRUSTPILOT_MAX_PAGES = 3  # Pages of reviews to fetch per app
+
+# =============================================================================
+# Reddit Configuration (Public JSON — NO API key needed)
 # =============================================================================
 TARGET_SUBREDDITS = ["replika", "CharacterAI", "artificial"]
 
-# Reddit API credentials are read from environment variables (set in GitHub Secrets)
-# Required env vars: REDDIT_CLIENT_ID, REDDIT_CLIENT_SECRET, REDDIT_USER_AGENT
+# Public JSON endpoint (no auth required)
+REDDIT_JSON_TEMPLATE = "https://www.reddit.com/r/{subreddit}/new.json?limit={limit}"
+REDDIT_USER_AGENT = "AI-Companion-Tracker/1.0 (Academic Research)"
 
 # Maximum posts to fetch per subreddit per run
-REDDIT_POST_LIMIT = 200
-
-# Maximum comments to fetch per post
-REDDIT_COMMENT_LIMIT = 50
+REDDIT_POST_LIMIT = 100
 
 # =============================================================================
 # Classification Dictionaries
@@ -62,10 +74,18 @@ import os
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(REPO_ROOT, "data")
 APPSTORE_CSV = os.path.join(DATA_DIR, "appstore_weekly.csv")
+TRUSTPILOT_CSV = os.path.join(DATA_DIR, "trustpilot_weekly.csv")
 REDDIT_CSV = os.path.join(DATA_DIR, "reddit_weekly.csv")
 
 # CSV column definitions (auto-created on first run)
 APPSTORE_COLUMNS = [
+    "week", "app", "review_count",
+    "benefit_count", "harm_count",
+    "benefit_rate", "harm_rate",
+    "net_sentiment",
+]
+
+TRUSTPILOT_COLUMNS = [
     "week", "app", "review_count",
     "benefit_count", "harm_count",
     "benefit_rate", "harm_rate",

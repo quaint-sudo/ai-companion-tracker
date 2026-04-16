@@ -1,26 +1,25 @@
 """
-Reddit API ingestion via PRAW.
-Fetches recent posts and comments from target subreddits, classifies them,
-and appends weekly aggregates to data/reddit_weekly.csv.
+Reddit public JSON scraper (NO API key required).
+Fetches recent posts from target subreddits using Reddit's public .json endpoints,
+classifies them, and appends weekly aggregates to data/reddit_weekly.csv.
 
 Run as: python -m ingestion.reddit_api
 
-Requires environment variables:
-    REDDIT_CLIENT_ID
-    REDDIT_CLIENT_SECRET
-    REDDIT_USER_AGENT  (optional, defaults to a generic agent string)
+This uses Reddit's public JSON interface which requires no authentication.
+Rate limit: ~60 requests/minute for unauthenticated access.
 """
 
 import os
-import sys
-import praw
+import time
+import requests
 import pandas as pd
 from datetime import datetime, timezone
 
 from ingestion.config import (
     TARGET_SUBREDDITS,
+    REDDIT_JSON_TEMPLATE,
+    REDDIT_USER_AGENT,
     REDDIT_POST_LIMIT,
-    REDDIT_COMMENT_LIMIT,
     REDDIT_CSV,
     REDDIT_COLUMNS,
     DATA_DIR,
@@ -35,63 +34,74 @@ def get_current_week() -> str:
     return f"{iso[0]}-W{iso[1]:02d}"
 
 
-def get_reddit_client() -> praw.Reddit:
+def fetch_subreddit_texts(subreddit_name: str) -> dict:
     """
-    Create an authenticated Reddit client from environment variables.
-    Uses read-only mode (no user login needed).
-    """
-    client_id = os.environ.get("REDDIT_CLIENT_ID")
-    client_secret = os.environ.get("REDDIT_CLIENT_SECRET")
-    user_agent = os.environ.get("REDDIT_USER_AGENT", "AI-Companion-Tracker/1.0")
-
-    if not client_id or not client_secret:
-        print("[ERROR] REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET must be set.")
-        print("        Set them as environment variables or GitHub Secrets.")
-        sys.exit(1)
-
-    return praw.Reddit(
-        client_id=client_id,
-        client_secret=client_secret,
-        user_agent=user_agent,
-    )
-
-
-def fetch_subreddit_texts(reddit: praw.Reddit, subreddit_name: str) -> dict:
-    """
-    Fetch recent posts and comments from a subreddit.
+    Fetch recent posts from a subreddit using the public JSON API.
+    No authentication needed.
 
     Returns:
         dict with:
             - post_texts (list[str]): Post titles + selftext
-            - comment_texts (list[str]): Comment bodies
             - post_count (int)
-            - comment_count (int)
+            - comment_count (int): Estimated from num_comments field
     """
-    subreddit = reddit.subreddit(subreddit_name)
+    headers = {
+        "User-Agent": REDDIT_USER_AGENT,
+    }
+
     post_texts = []
-    comment_texts = []
+    total_comments = 0
+    after = None  # Pagination cursor
 
-    try:
-        for post in subreddit.new(limit=REDDIT_POST_LIMIT):
-            # Combine title and body for classification
-            text = f"{post.title} {post.selftext or ''}".strip()
-            if text:
+    # Fetch in batches (max 100 per request)
+    remaining = REDDIT_POST_LIMIT
+    while remaining > 0:
+        batch_size = min(remaining, 100)
+        url = REDDIT_JSON_TEMPLATE.format(subreddit=subreddit_name, limit=batch_size)
+        if after:
+            url += f"&after={after}"
+
+        try:
+            resp = requests.get(url, headers=headers, timeout=30)
+
+            # Handle rate limiting
+            if resp.status_code == 429:
+                print(f"  [RATE LIMIT] Waiting 10 seconds...")
+                time.sleep(10)
+                continue
+
+            resp.raise_for_status()
+            data = resp.json()
+        except (requests.RequestException, ValueError) as e:
+            print(f"  [WARN] Error fetching r/{subreddit_name}: {e}")
+            break
+
+        posts = data.get("data", {}).get("children", [])
+        if not posts:
+            break
+
+        for post in posts:
+            post_data = post.get("data", {})
+            title = post_data.get("title", "")
+            selftext = post_data.get("selftext", "")
+            text = f"{title} {selftext}".strip()
+            if text and not post_data.get("stickied", False):
                 post_texts.append(text)
+            total_comments += post_data.get("num_comments", 0)
 
-            # Fetch top-level comments
-            post.comments.replace_more(limit=0)  # Skip "load more" to stay fast
-            for comment in post.comments[:REDDIT_COMMENT_LIMIT]:
-                if hasattr(comment, "body") and comment.body:
-                    comment_texts.append(comment.body)
+        # Get pagination cursor
+        after = data.get("data", {}).get("after")
+        if not after:
+            break
 
-    except Exception as e:
-        print(f"  [WARN] Error fetching r/{subreddit_name}: {e}")
+        remaining -= batch_size
+        # Respect rate limits: 1 second between requests
+        time.sleep(1.5)
 
     return {
         "post_texts": post_texts,
-        "comment_texts": comment_texts,
         "post_count": len(post_texts),
-        "comment_count": len(comment_texts),
+        "comment_count": total_comments,
     }
 
 
@@ -127,23 +137,22 @@ def run():
     """Main entry point: fetch, classify, and append data for all target subreddits."""
     ensure_csv_exists()
     week = get_current_week()
-    print(f"=== Reddit Ingestion — Week {week} ===")
+    print(f"=== Reddit Ingestion (Public JSON) — Week {week} ===")
+    print(f"    No API key required.\n")
 
-    reddit = get_reddit_client()
     new_rows = []
 
     for sub_name in TARGET_SUBREDDITS:
-        print(f"\n[r/{sub_name}] Fetching posts and comments...")
+        print(f"[r/{sub_name}] Fetching posts...")
 
         if week_sub_exists(week, sub_name):
             print(f"  [SKIP] Data for r/{sub_name} week {week} already exists.")
             continue
 
-        data = fetch_subreddit_texts(reddit, sub_name)
-        all_texts = data["post_texts"] + data["comment_texts"]
-        total_items = len(all_texts)
+        data = fetch_subreddit_texts(sub_name)
+        total_items = len(data["post_texts"])
 
-        print(f"  Collected {data['post_count']} posts, {data['comment_count']} comments.")
+        print(f"  Collected {data['post_count']} posts ({data['comment_count']} comments referenced).")
 
         if total_items == 0:
             print(f"  [WARN] No texts found, writing zero row.")
@@ -161,7 +170,7 @@ def run():
             })
             continue
 
-        stats = classify_batch(all_texts)
+        stats = classify_batch(data["post_texts"])
         prev_sentiment = get_previous_sentiment(sub_name)
         velocity = round(stats["net_sentiment"] - prev_sentiment, 4) if prev_sentiment is not None else 0.0
 
@@ -180,6 +189,9 @@ def run():
         new_rows.append(row)
         print(f"  benefit_rate={row['benefit_rate']}, harm_rate={row['harm_rate']}, "
               f"net={row['net_sentiment']}, velocity={row['sentiment_velocity']}")
+
+        # Respect rate limits between subreddits
+        time.sleep(2)
 
     if new_rows:
         df_existing = pd.read_csv(REDDIT_CSV)

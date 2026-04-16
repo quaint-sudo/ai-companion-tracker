@@ -29,3 +29,6 @@ week,subreddit,post_count,comment_count,benefit_count,harm_count,benefit_rate,ha
 2026-W15,CharacterAI,345,3178,612,489,0.1738,0.1389,0.0349,0.0232
 2026-W15,replika,224,1812,489,218,0.2401,0.1071,0.133,0.0199
 2026-W15,artificial,259,2234,391,189,0.1568,0.0758,0.081,0.0116
+2026-W16,replika,0,0,0,0,0.0,0.0,0.0,0.0
+2026-W16,CharacterAI,0,0,0,0,0.0,0.0,0.0,0.0
+2026-W16,artificial,0,0,0,0,0.0,0.0,0.0,0.0

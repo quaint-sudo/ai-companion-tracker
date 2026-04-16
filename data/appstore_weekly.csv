@@ -39,3 +39,7 @@ week,app,review_count,benefit_count,harm_count,benefit_rate,harm_rate,net_sentim
 2026-W15,replika,178,50,26,0.281,0.1461,0.1348
 2026-W15,pi,110,35,8,0.3182,0.0727,0.2455
 2026-W15,woebot,77,40,3,0.5195,0.039,0.4805
+2026-W16,character_ai,0,0,0,0.0,0.0,0.0
+2026-W16,replika,250,23,4,0.092,0.016,0.076
+2026-W16,pi,0,0,0,0.0,0.0,0.0
+2026-W16,woebot,250,126,6,0.504,0.024,0.48

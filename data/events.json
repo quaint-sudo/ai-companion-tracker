@@ -1,0 +1,38 @@
+[
+  {
+    "date": "2024-10-22",
+    "type": "legal",
+    "app": "Character.AI",
+    "title": "Garcia v. Character Technologies filed",
+    "description": "Wrongful death lawsuit filed in U.S. District Court, Middle District of Florida. Anchor event for this study.",
+    "anchor": true
+  },
+  {
+    "date": "2024-11-09",
+    "type": "legal",
+    "app": "Character.AI",
+    "title": "Amended complaint filed",
+    "description": "Garcia filed amended complaint."
+  },
+  {
+    "date": "2024-12-09",
+    "type": "legal",
+    "app": "Character.AI",
+    "title": "Additional lawsuits filed in Texas",
+    "description": "Second wrongful death suit and related claims against Character.AI filed by Texas families."
+  },
+  {
+    "date": "2024-12-12",
+    "type": "policy",
+    "app": "Character.AI",
+    "title": "Character.AI announces teen safety features",
+    "description": "Announcement of new under-18 model, parental controls, and content moderation, following the Garcia v. Character Technologies filing in October."
+  },
+  {
+    "date": "2026-01-07",
+    "type": "legal",
+    "app": "Character.AI",
+    "title": "Case terminated",
+    "description": "Case terminated per CourtListener docket. Reporting indicates settlement."
+  }
+]

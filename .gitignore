@@ -1,9 +1,29 @@
+# Python
 __pycache__/
 *.pyc
-.env
-.venv/
+*.pyo
+*.pyd
+.Python
+env/
 venv/
-*.egg-info/
-dist/
-build/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
 .pytest_cache/
+
+# Data Backups & Scratch
+data/*.backup.json
+data/*.new.json
+data/*.truncated_backup.json
+data/processed/
+docs/data/*.csv
+docs/data/reddit_weekly_preview.json
+docs/data/timeline.json
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

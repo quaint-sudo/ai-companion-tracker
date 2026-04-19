@@ -3,202 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI Companion Narrative Shift Tracker — monitoring how users talk about AI companion apps over time, tracking benefit and harm language patterns.">
     <title>AI Companion Narrative Shift Tracker</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@2.1.0/dist/chartjs-plugin-annotation.min.js"></script>
 </head>
 <body>
-    <!-- Ambient animated background -->
-    <div class="bg-glow bg-glow-1"></div>
-    <div class="bg-glow bg-glow-2"></div>
-    <div class="bg-glow bg-glow-3"></div>
-
-    <div class="container">
-        <!-- Header -->
-        <header id="header">
-            <div class="header-badge">
-                <span class="pulse-dot"></span>
-                <span>LIVE — Auto-updates weekly</span>
-            </div>
-            <h1>AI Companion <span class="gradient-text">Narrative Shift</span> Tracker</h1>
-            <p class="subtitle">
-                Monitoring how users talk about AI companion apps over time.<br>
-                Tracking whether narrative shifts around <strong>harm</strong>, <strong>dependency</strong>, 
-                and <strong>benefit</strong> appear before or after major public incidents.
-            </p>
-            <div class="target-apps">
-                <span class="app-chip" data-app="character_ai">Character.AI</span>
-                <span class="app-chip" data-app="replika">Replika</span>
-                <span class="app-chip" data-app="pi">Pi</span>
-                <span class="app-chip" data-app="woebot">Woebot</span>
-            </div>
+    <div class="dashboard-container">
+        <!-- HEADER -->
+        <header class="header">
+            <h1>AI Companion Narrative Shift Tracker</h1>
+            <p class="caption">Harvard Law School. Debates on Frontier AI Governance.<br>Session 16: Relationships, Human Development, and Culture.</p>
         </header>
 
-        <!-- Stats Overview Cards -->
-        <section id="stats-overview" class="stats-grid">
-            <div class="stat-card" id="stat-total-reviews">
-                <div class="stat-icon">📊</div>
-                <div class="stat-value" id="total-reviews-value">—</div>
-                <div class="stat-label">Total Reviews Tracked</div>
-            </div>
-            <div class="stat-card stat-benefit" id="stat-avg-benefit">
-                <div class="stat-icon">💚</div>
-                <div class="stat-value" id="avg-benefit-value">—</div>
-                <div class="stat-label">Avg Benefit Rate</div>
-            </div>
-            <div class="stat-card stat-harm" id="stat-avg-harm">
-                <div class="stat-icon">🔴</div>
-                <div class="stat-value" id="avg-harm-value">—</div>
-                <div class="stat-label">Avg Harm Rate</div>
-            </div>
-            <div class="stat-card" id="stat-weeks-tracked">
-                <div class="stat-icon">📅</div>
-                <div class="stat-value" id="weeks-tracked-value">—</div>
-                <div class="stat-label">Weeks Tracked</div>
-            </div>
-        </section>
+        <main>
+            <!-- SECTION 1: THE FINDING -->
+            <section class="finding-section">
+                <div id="evergreen-headline-container">
+                    <h2 id="finding-text" class="huge-finding">Loading latest metrics...</h2>
+                    <p id="evergreen-sub-headline" style="color: var(--text-secondary); font-size: 1.1rem; margin-top: 1rem; max-width: 900px; line-height: 1.6;"></p>
+                    <p id="evergreen-context" style="color: #d4d4d8; font-size: 1rem; margin-top: 1rem; line-height: 1.5;"></p>
+                </div>
 
-        <!-- App Store Section -->
-        <section id="appstore-section" class="chart-section">
-            <div class="section-header">
-                <h2>
-                    <span class="section-icon">📱</span>
-                    App Store Reviews
-                </h2>
-                <p>iOS App Store review sentiment over time</p>
-            </div>
-            <div class="chart-grid">
-                <div class="chart-card">
-                    <h3>Net Sentiment Over Time</h3>
-                    <p class="chart-desc">Benefit rate minus harm rate — positive means more benefit language</p>
-                    <div class="chart-wrapper">
-                        <canvas id="appstore-sentiment-chart"></canvas>
-                    </div>
+                <div class="mt-8" id="events-section">
+                   <h3 style="color: #fff; font-size: 1.2rem; margin-bottom: 1rem;">Historical Events & Rates</h3>
+                   <div id="events-table-container"></div>
                 </div>
-                <div class="chart-card">
-                    <h3>Benefit vs Harm Rates</h3>
-                    <p class="chart-desc">Percentage of reviews containing benefit or harm keywords</p>
-                    <div class="chart-wrapper">
-                        <canvas id="appstore-rates-chart"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="chart-card full-width">
-                <h3>Weekly Review Volume</h3>
-                <p class="chart-desc">Number of reviews collected per app per week</p>
-                <div class="chart-wrapper">
-                    <canvas id="appstore-volume-chart"></canvas>
-                </div>
-            </div>
-        </section>
 
-        <!-- Trustpilot Section -->
-        <section id="trustpilot-section" class="chart-section">
-            <div class="section-header">
-                <h2>
-                    <span class="section-icon">⭐</span>
-                    Trustpilot Reviews
-                </h2>
-                <p>Trustpilot review sentiment over time</p>
-            </div>
-            <div class="chart-grid">
-                <div class="chart-card">
-                    <h3>Net Sentiment Over Time</h3>
-                    <p class="chart-desc">Benefit rate minus harm rate across Trustpilot reviews</p>
-                    <div class="chart-wrapper">
-                        <canvas id="trustpilot-sentiment-chart"></canvas>
-                    </div>
+                <div class="mt-4" id="featured-analysis-panel" style="background: rgba(96, 165, 250, 0.05); border: 1px solid rgba(96, 165, 250, 0.2); padding: 1.5rem; border-radius: 8px;">
+                    <!-- Injected by JS -->
                 </div>
-                <div class="chart-card">
-                    <h3>Benefit vs Harm Rates</h3>
-                    <p class="chart-desc">Percentage of Trustpilot reviews containing benefit or harm keywords</p>
-                    <div class="chart-wrapper">
-                        <canvas id="trustpilot-rates-chart"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="chart-card full-width">
-                <h3>Weekly Review Volume</h3>
-                <p class="chart-desc">Number of Trustpilot reviews collected per app per week</p>
-                <div class="chart-wrapper">
-                    <canvas id="trustpilot-volume-chart"></canvas>
-                </div>
-            </div>
-        </section>
 
-        <!-- Reddit Section -->
-        <section id="reddit-section" class="chart-section">
-            <div class="section-header">
-                <h2>
-                    <span class="section-icon">💬</span>
-                    Reddit Community Discourse
-                </h2>
-                <p>Subreddit sentiment and engagement trends</p>
-            </div>
-            <div class="chart-grid">
-                <div class="chart-card">
-                    <h3>Net Sentiment Over Time</h3>
-                    <p class="chart-desc">Community sentiment across target subreddits</p>
-                    <div class="chart-wrapper">
-                        <canvas id="reddit-sentiment-chart"></canvas>
+                <p class="finding-caption" style="margin-top: 2rem;">
+                    <span id="finding-tooltip" title="" style="border-bottom: 1px dotted #a1a1aa; cursor: help; color: #a1a1aa;">Hover to view unrounded metrics computation.</span><br>
+                    r/CharacterAI submissions, pre-registered harm term matching. See methodology below.
+                </p>
+            </section>
+
+            <!-- SECTION 2: PRIMARY CHART -->
+            <section class="card chart-section">
+                <div class="card-header">
+                    <h2>Concern Signal Index: r/CharacterAI weekly harm-language rate</h2>
+                </div>
+                <!-- Primary Chart -->
+                <div class="chart-wrapper primary-wrapper">
+                    <canvas id="cai-chart"></canvas>
+                </div>
+                
+                <!-- Volume Context Chart -->
+                <div class="chart-wrapper volume-wrapper mt-4">
+                    <canvas id="cai-volume-chart"></canvas>
+                </div>
+                <p class="chart-caption mt-2">Submission volume per week (context). Rate spikes in low-volume weeks are less reliable.</p>
+            </section>
+
+            <!-- SECTION 3: CONTROL CHART -->
+            <section class="card chart-section">
+                <div class="card-header">
+                    <h2>Control: r/replika weekly harm-language rate</h2>
+                </div>
+                <div class="chart-wrapper control-wrapper">
+                    <canvas id="replika-chart"></canvas>
+                </div>
+                <p class="chart-caption mt-2">Replika is shown as a control. If harm-language rose in r/CharacterAI before the lawsuit but not in r/replika during the same period, the pattern is Character.AI-specific rather than a general companion-app trend.</p>
+            </section>
+
+            <!-- EXCERPTS SECTION -->
+            <section class="card chart-section mt-4">
+                <div class="card-header">
+                    <h2>Representative excerpts</h2>
+                </div>
+                <div class="card-body">
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 800px; line-height: 1.5;">
+                        These excerpts are the first five matching submissions by timestamp from each peak week. They illustrate what the regex classifier captures — not only clinical concern, but also hyperbolic self-description and roleplay framing. Readers should review excerpts to form their own interpretation of what the harm rate measures.
+                    </p>
+                    <div id="excerpts-container" style="display: flex; flex-direction: column; gap: 2rem;"></div>
+                </div>
+            </section>
+
+            <!-- SECTION 4 & 5: METHODOLOGY AND LIMITATIONS -->
+            <div class="card-grid-2 mt-4 mb-8">
+                <!-- METHODOLOGY -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Methodology</h2>
+                    </div>
+                    <div class="card-body type-copy">
+                        <!-- Worked Example -->
+                        <h3 style="color: #fff; font-size: 1.05rem; margin-bottom: 0.5rem;">How the Concern Signal Index is calculated</h3>
+                        <p style="margin-bottom: 1.5rem;">For each ISO week, we count the number of submissions in the subreddit whose title or body text contains at least one harm pattern (case-insensitive regex match). We divide that count by the total number of submissions that week to get the harm rate. The benefit rate is computed the same way using the benefit pattern list.</p>
+                        <div id="worked-example-container" style="background: rgba(255,255,255,0.03); padding: 1rem; border: 1px solid var(--border-subtle); border-radius: 6px; margin-bottom: 1.5rem;"></div>
+
+                        <p><strong>Data:</strong> Public Reddit submissions from r/CharacterAI (primary) and r/replika (control), retrieved via PullPush.io & Arctic Shift, covering August 2024 through today. Comments not included in this version.</p>
+                        <div class="mt-4"><strong>Metrics:</strong>
+                            <ul>
+                                <li><strong>Harm Rate:</strong> Share of weekly submissions matching harm patterns. The primary "Concern Signal Index".</li>
+                                <li><strong>11-Week Trailing Mean:</strong> The mean harm rate across the 11 complete weeks immediately preceding the latest complete week (a ~3 month baseline).</li>
+                                <li><strong>Benefit Rate:</strong> Share of weekly submissions matching benefit patterns (shown in tooltips).</li>
+                            </ul>
+                        </div>
+                        <p><strong>Classification:</strong> The term lists below were registered before the first data pull and have not been modified. A submission matches a category if any pattern in that category is found in its title or selftext. Pattern matching is purely lexical: it does not detect sarcasm, quotation, or context reversal.</p>
+                        
+                        <h4 class="mt-4">Harm Patterns</h4>
+                        <ul id="harm-list" class="term-list"></ul>
+
+                        <h4 class="mt-2">Benefit Patterns</h4>
+                        <ul id="benefit-list" class="term-list"></ul>
                     </div>
                 </div>
-                <div class="chart-card">
-                    <h3>Sentiment Velocity</h3>
-                    <p class="chart-desc">Week-over-week sentiment change — spikes indicate rapid narrative shifts</p>
-                    <div class="chart-wrapper">
-                        <canvas id="reddit-velocity-chart"></canvas>
+
+                <!-- LIMITATIONS -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Limitations</h2>
+                    </div>
+                    <div class="card-body type-copy">
+                        <ul>
+                            <li><strong>Lexical ambiguity:</strong> Several regex patterns catch words that carry different meanings in different contexts. For example, 'support' matches both 'a supportive conversation' (the sense the benefit classifier intends) and 'customer support' (references to the app company's help channels, unrelated to user wellbeing). Similarly, 'help' matches both expressions of distress ('I need help') and mundane product discussion ('help with creative writing'). The classifier cannot distinguish these. Readers should consult the Representative Excerpts section to audit how terms are being used in practice, and interpret the benefit rate accordingly.</li>
+                            <li>Submissions only, not comments.</li>
+                            <li>Regex matching cannot detect sarcasm, context reversal, or new vocabulary not in the pre-registered lists.</li>
+                            <li>Reddit users are a self-selected enthusiast population and do not represent the full user base of either app.</li>
+                            <li>Retrospective window begins August 2024, which provides roughly 12 weeks of pre-lawsuit baseline.</li>
+                            <li>Weeks with low submission volume produce noisy rate estimates.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="chart-card full-width">
-                <h3>Community Volume (Posts + Comments)</h3>
-                <p class="chart-desc">Total engagement per subreddit per week</p>
-                <div class="chart-wrapper">
-                    <canvas id="reddit-volume-chart"></canvas>
-                </div>
-            </div>
-        </section>
 
-        <!-- Methodology -->
-        <section id="methodology" class="methodology-section">
-            <h2>Methodology</h2>
-            <div class="method-grid">
-                <div class="method-card">
-                    <h3>📥 Data Collection</h3>
-                    <p>App Store reviews via Apple RSS feeds (up to 250/app/week). Trustpilot reviews via web scraping. Reddit posts via public JSON feeds. All automated weekly via GitHub Actions — zero API keys required.</p>
+            <!-- PATTERN COUNTS -->
+            <section class="card mt-4 mb-8">
+                <div class="card-header">
+                    <h2>Per-Pattern Match Counts</h2>
                 </div>
-                <div class="method-card">
-                    <h3>🏷️ Classification</h3>
-                    <p>Dictionary-based keyword matching. <strong>Benefit terms:</strong> support, helpful, anxiety, loneliness, comfort, grief. <strong>Harm terms:</strong> addicted, manipulative, dependent, obsessed, unsafe, self-harm.</p>
+                <div class="card-body">
+                    <div class="card-grid-2" id="pattern-tables-container">
+                        <!-- Tables injected by JS -->
+                    </div>
                 </div>
-                <div class="method-card">
-                    <h3>📐 Metrics</h3>
-                    <p><strong>Benefit/Harm Rate:</strong> % of texts with ≥1 matching term. <strong>Net Sentiment:</strong> benefit_rate − harm_rate. <strong>Velocity:</strong> week-over-week net sentiment change.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer id="footer">
-            <p>AI Companion Narrative Shift Tracker &middot; Data updates every Monday at 06:00 UTC</p>
-            <p class="footer-sub">Built with Chart.js &middot; Powered by GitHub Actions &middot; <a href="https://github.com" id="repo-link">View Source</a></p>
-        </footer>
+            </section>
+        </main>
     </div>
-
-    <!-- No-data overlay (shown when CSVs are empty) -->
-    <div id="no-data-overlay" class="no-data-overlay hidden">
-        <div class="no-data-content">
-            <div class="no-data-icon">🚀</div>
-            <h2>Awaiting First Data Collection</h2>
-            <p>The pipeline hasn't run yet. Trigger the GitHub Action manually or wait for the next scheduled Monday run.</p>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    
     <script src="app.js"></script>
 </body>
 </html>

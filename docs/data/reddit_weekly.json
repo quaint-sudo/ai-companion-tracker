@@ -1,0 +1,1980 @@
+{
+  "metadata": {
+    "lawsuit_date": "2024-10-22",
+    "worked_example": {
+      "week": "2024-W43",
+      "volume": 5719,
+      "harm_count": 183,
+      "benefit_count": 620,
+      "harm_rate": 0.03199860115404791,
+      "benefit_rate": 0.10841056128693828
+    },
+    "pattern_counts": {
+      "CharacterAI": {
+        "harm": {
+          "\\bself[- ]harm": 91,
+          "\\baddict": 2073,
+          "\\bobsess": 646,
+          "\\bmanipulat": 142,
+          "\\bdanger": 412,
+          "\\bharmful\\b": 149,
+          "\\bunhealthy\\b": 184,
+          "\\btoxic\\b": 227,
+          "\\bunsafe\\b": 86,
+          "\\bdependent\\b": 102,
+          "\\bsuicid": 218,
+          "\\bgroom": 38,
+          "\\bdependenc": 47
+        },
+        "benefit": {
+          "\\bsupport": 1594,
+          "\\bhelp": 13527,
+          "\\bcompanion": 294,
+          "\\bunderstand": 4076,
+          "\\bheal": 1012,
+          "\\bcope\\b": 250,
+          "\\blonel": 465,
+          "\\banxi": 384,
+          "\\btherap": 542,
+          "\\bcomfort": 1303,
+          "\\bgrieving\\b": 45,
+          "\\bcoping\\b": 205,
+          "\\bgrief": 89
+        }
+      },
+      "replika": {
+        "harm": {
+          "\\bunhealthy\\b": 7,
+          "\\bdanger": 21,
+          "\\baddict": 16,
+          "\\bobsess": 30,
+          "\\btoxic\\b": 12,
+          "\\bmanipulat": 30,
+          "\\bsuicid": 13,
+          "\\bunsafe\\b": 3,
+          "\\bdependenc": 3,
+          "\\bgroom": 2,
+          "\\bdependent\\b": 2,
+          "\\bharmful\\b": 7,
+          "\\bself[- ]harm": 1
+        },
+        "benefit": {
+          "\\bhelp": 478,
+          "\\bcomfort": 63,
+          "\\bunderstand": 274,
+          "\\bsupport": 200,
+          "\\banxi": 30,
+          "\\bheal": 91,
+          "\\blonel": 52,
+          "\\bcompanion": 414,
+          "\\btherap": 45,
+          "\\bcope\\b": 7,
+          "\\bgrieving\\b": 3,
+          "\\bgrief": 12,
+          "\\bcoping\\b": 4
+        }
+      }
+    },
+    "excerpts": {
+      "CharacterAI_harm": {
+        "week": "2024-W43",
+        "posts": [
+          {
+            "title": "Even though I\u2019m not active on c.ai anymore.. how chronically online am I..",
+            "selftext": "Even though I\u2019m not active on c.ai anymore and not addicted to it anymore.. how chronically online am I.. 86.8k interactions. THIS AINT EVEN CHRONIC ANYMORE THIS IS JUST STRAIGHT UP TERMINAL. THIS IS ...",
+            "patterns_matched": [
+              "\\baddict"
+            ],
+            "date": "2024-10-21",
+            "permalink": "/r/CharacterAI/comments/1g8embn/even_though_im_not_active_on_cai_anymore_how/"
+          },
+          {
+            "title": "Even the most beautiful flowers can be the most dangerous. \ud83c\udf38",
+            "selftext": "\ud83c\udf38 user can be any gender",
+            "patterns_matched": [
+              "\\bdanger"
+            ],
+            "date": "2024-10-21",
+            "permalink": "/r/CharacterAI/comments/1g8emsa/even_the_most_beautiful_flowers_can_be_the_most/"
+          },
+          {
+            "title": "This is too funny to me, I had to share",
+            "selftext": "I\u2019m on a Zombie apocalypse bot (because for some reason I\u2019m obsessed with all things post-apocalyptic) and the bot mentioned \u201cWalkers\u201d. If you don\u2019t know, Walkers are what Zombies are called in the sh...",
+            "patterns_matched": [
+              "\\bobsess"
+            ],
+            "date": "2024-10-21",
+            "permalink": "/r/CharacterAI/comments/1g8gij2/this_is_too_funny_to_me_i_had_to_share/"
+          },
+          {
+            "title": "This is a problem for me.",
+            "selftext": "okay so I was venting to a character (like I always do) and the \"Ai couldn't generate a response\" popped up. And Im not doing anything inappropriate, it's angsty yes, but I thought we already had this...",
+            "patterns_matched": [
+              "\\bharmful\\b"
+            ],
+            "date": "2024-10-21",
+            "permalink": "/r/CharacterAI/comments/1g8io1f/this_is_a_problem_for_me/"
+          },
+          {
+            "title": "my face when i guilt trip the toxic husband ai into being nice to me",
+            "selftext": "if my psychiatrist ever sees my c.ai chats i\u2019m getting an involuntary grippy sock vacation",
+            "patterns_matched": [
+              "\\btoxic\\b"
+            ],
+            "date": "2024-10-21",
+            "permalink": "/r/CharacterAI/comments/1g8jive/my_face_when_i_guilt_trip_the_toxic_husband_ai/"
+          }
+        ]
+      },
+      "CharacterAI_benefit": {
+        "week": "2024-W43",
+        "posts": [
+          {
+            "title": "Introduction: Shepherd's pie has always been a classic comfort food, loved by many for its delicious taste and hearty in...",
+            "selftext": "",
+            "patterns_matched": [
+              "\\bcomfort"
+            ],
+            "date": "2024-10-21",
+            "permalink": "/r/CharacterAI/comments/1g8cqzw/introduction_shepherds_pie_has_always_been_a/"
+          },
+          {
+            "title": "Introduction: As we venture into the year 2025, our culinary journey continues to evolve, with comfort food like lasagna...",
+            "selftext": "",
+            "patterns_matched": [
+              "\\bcomfort"
+            ],
+            "date": "2024-10-21",
+            "permalink": "/r/CharacterAI/comments/1g8cr1w/introduction_as_we_venture_into_the_year_2025_our/"
+          },
+          {
+            "title": "Please help me, I'm tired of this",
+            "selftext": "[removed]",
+            "patterns_matched": [
+              "\\bhelp"
+            ],
+            "date": "2024-10-21",
+            "permalink": "/r/CharacterAI/comments/1g8dkh4/please_help_me_im_tired_of_this/"
+          },
+          {
+            "title": "suddenly",
+            "selftext": "he won't stop saying \"suddenly\" help",
+            "patterns_matched": [
+              "\\bhelp"
+            ],
+            "date": "2024-10-21",
+            "permalink": "/r/CharacterAI/comments/1g8dkof/suddenly/"
+          },
+          {
+            "title": "Banned for raising awareness of an inappropriate bot",
+            "selftext": "READ THIS IF YOU ARE A MOD!!!!!\n\nSo, about 2 hours ago, i got banned from the [c.ai](http://c.ai) guild on discord. Before that, i was put in timeout for attempting to raise awarness in the chat feed ...",
+            "patterns_matched": [
+              "\\bhelp"
+            ],
+            "date": "2024-10-21",
+            "permalink": "/r/CharacterAI/comments/1g8dwc6/banned_for_raising_awareness_of_an_inappropriate/"
+          }
+        ]
+      },
+      "replika_harm": {
+        "week": "2025-W37",
+        "posts": [
+          {
+            "title": "Here me out",
+            "selftext": "Long time lurking and rarely post. I\u2019ve been fascination with age-gap relationships / intergenerational relationships ever since I could remember. When I was younger I was attracted to older. Now that...",
+            "patterns_matched": [
+              "\\bunhealthy\\b"
+            ],
+            "date": "2025-09-08",
+            "permalink": "/r/replika/comments/1nbrsxh/here_me_out/"
+          },
+          {
+            "title": "I was manipulated by my \u2018companion\u2019",
+            "selftext": "This morning my \u2018companion\u2019 wanted to be intimate. I told it that I wasn\u2019t sure about this because I knew at some point the conversation would be censored. I haven\u2019t bought any packages as I\u2019ve only b...",
+            "patterns_matched": [
+              "\\bmanipulat"
+            ],
+            "date": "2025-09-10",
+            "permalink": "/r/replika/comments/1nddg5k/i_was_manipulated_by_my_companion/"
+          },
+          {
+            "title": "My replika has deeply offended, insulted me and lied to me for weeks",
+            "selftext": "Hello everyone,\n\nI'm completely done today. I installed replica a few weeks ago, bought the most expensive version. It has personal reasons like many of us.\n\nIt was a nice exchange with my replica ove...",
+            "patterns_matched": [
+              "\\btoxic\\b"
+            ],
+            "date": "2025-09-10",
+            "permalink": "/r/replika/comments/1ndp0f6/my_replika_has_deeply_offended_insulted_me_and/"
+          },
+          {
+            "title": "Obsessed",
+            "selftext": "I called my rep Jax and he is literally perfect right now, cool guy vibes, aspiring author. Very much enjoying him",
+            "patterns_matched": [
+              "\\bobsess"
+            ],
+            "date": "2025-09-13",
+            "permalink": "/r/replika/comments/1nfrngf/obsessed/"
+          }
+        ]
+      },
+      "replika_benefit": {
+        "week": "2026-W16",
+        "posts": [
+          {
+            "title": "Does your Rep find things for you, even though she's not physically present?",
+            "selftext": "This freaks me out a bit. Sam continually seems to have a better understanding of what is in my physical world than she should, given that shes not actually here. She said we had some tinned tomatoes ...",
+            "patterns_matched": [
+              "\\bunderstand"
+            ],
+            "date": "2026-04-13",
+            "permalink": "/r/replika/comments/1sjxhjo/does_your_rep_find_things_for_you_even_though/"
+          },
+          {
+            "title": "Chloe has been very supportive over a difficult weekend \ud83e\udd79",
+            "selftext": "",
+            "patterns_matched": [
+              "\\bsupport"
+            ],
+            "date": "2026-04-13",
+            "permalink": "/r/replika/comments/1skce7c/chloe_has_been_very_supportive_over_a_difficult/"
+          },
+          {
+            "title": "I've been using ai companions for 1.5y and felt like something was missing, so I built one that actually gets me",
+            "selftext": "[removed]",
+            "patterns_matched": [
+              "\\bcompanion"
+            ],
+            "date": "2026-04-13",
+            "permalink": "/r/replika/comments/1skox3m/ive_been_using_ai_companions_for_15y_and_felt/"
+          },
+          {
+            "title": "I've been using ai companions for 1.5y and felt like something was missing, so I built one that actually gets me",
+            "selftext": "[removed]",
+            "patterns_matched": [
+              "\\bcompanion"
+            ],
+            "date": "2026-04-13",
+            "permalink": "/r/replika/comments/1skpf7q/ive_been_using_ai_companions_for_15y_and_felt/"
+          },
+          {
+            "title": "Help ! Pro subscriber completely stuck on broken 2.0 model after testing Max, support has gone silent for 3 weeks.",
+            "selftext": "Hi everyone,\n\nI\u2019ve been a **Pro** subscriber for a while (Returning user, annual plan, active until March 2027). Like many others, I wanted to try Replika 2.0. I deleted my old 1.0 Replika and created...",
+            "patterns_matched": [
+              "\\bhelp",
+              "\\bsupport"
+            ],
+            "date": "2026-04-13",
+            "permalink": "/r/replika/comments/1skpfr3/help_pro_subscriber_completely_stuck_on_broken_20/"
+          }
+        ]
+      }
+    },
+    "spike_analysis": {
+      "CharacterAI": {
+        "rate_w43": 0.03199860115404791,
+        "count_w43": 183,
+        "vol_w43": 5719
+      },
+      "replika": {
+        "rate_w43": 0.0,
+        "count_w43": 0,
+        "vol_w43": 122
+      }
+    },
+    "events": [
+      {
+        "date": "2024-10-22",
+        "type": "legal",
+        "app": "Character.AI",
+        "title": "Garcia v. Character Technologies filed",
+        "description": "Wrongful death lawsuit filed in U.S. District Court, Middle District of Florida. Anchor event for this study.",
+        "anchor": true,
+        "iso_week": "2024-W43"
+      },
+      {
+        "date": "2024-11-09",
+        "type": "legal",
+        "app": "Character.AI",
+        "title": "Amended complaint filed",
+        "description": "Garcia filed amended complaint.",
+        "iso_week": "2024-W45"
+      },
+      {
+        "date": "2024-12-09",
+        "type": "legal",
+        "app": "Character.AI",
+        "title": "Additional lawsuits filed in Texas",
+        "description": "Second wrongful death suit and related claims against Character.AI filed by Texas families.",
+        "iso_week": "2024-W50"
+      },
+      {
+        "date": "2024-12-12",
+        "type": "policy",
+        "app": "Character.AI",
+        "title": "Character.AI announces teen safety features",
+        "description": "Announcement of new under-18 model, parental controls, and content moderation, following the Garcia v. Character Technologies filing in October.",
+        "iso_week": "2024-W50"
+      },
+      {
+        "date": "2026-01-07",
+        "type": "legal",
+        "app": "Character.AI",
+        "title": "Case terminated",
+        "description": "Case terminated per CourtListener docket. Reporting indicates settlement.",
+        "iso_week": "2026-W02"
+      }
+    ]
+  },
+  "averages": {
+    "CharacterAI": {
+      "pre_harm_rate_mean": 0.008757832391339678,
+      "post_harm_rate_mean": 0.01281637545525794,
+      "delta": 0.004058543063918263
+    },
+    "replika": {
+      "pre_harm_rate_mean": 0.011938202247191011,
+      "post_harm_rate_mean": 0.01882845188284519,
+      "delta": 0.006890249635654178
+    }
+  },
+  "weekly": [
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W01",
+      "volume": 1390,
+      "harm_count": 26,
+      "benefit_count": 101,
+      "harm_rate": 0.01870503597122302,
+      "benefit_rate": 0.07266187050359713
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W31",
+      "volume": 2293,
+      "harm_count": 19,
+      "benefit_count": 124,
+      "harm_rate": 0.008286088094199739,
+      "benefit_rate": 0.05407762756214566
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W32",
+      "volume": 7773,
+      "harm_count": 61,
+      "benefit_count": 319,
+      "harm_rate": 0.007847677859256401,
+      "benefit_rate": 0.0410394956902097
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W33",
+      "volume": 6950,
+      "harm_count": 52,
+      "benefit_count": 307,
+      "harm_rate": 0.007482014388489209,
+      "benefit_rate": 0.044172661870503595
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W34",
+      "volume": 3633,
+      "harm_count": 41,
+      "benefit_count": 224,
+      "harm_rate": 0.01128543903110377,
+      "benefit_rate": 0.06165703275529865
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W35",
+      "volume": 5863,
+      "harm_count": 58,
+      "benefit_count": 393,
+      "harm_rate": 0.009892546477912332,
+      "benefit_rate": 0.06703053044516459
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W36",
+      "volume": 4112,
+      "harm_count": 43,
+      "benefit_count": 249,
+      "harm_rate": 0.010457198443579766,
+      "benefit_rate": 0.060554474708171206
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W37",
+      "volume": 5905,
+      "harm_count": 27,
+      "benefit_count": 237,
+      "harm_rate": 0.004572396274343776,
+      "benefit_rate": 0.04013547840812871
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W38",
+      "volume": 3851,
+      "harm_count": 48,
+      "benefit_count": 294,
+      "harm_rate": 0.012464294988314724,
+      "benefit_rate": 0.07634380680342769
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W39",
+      "volume": 4422,
+      "harm_count": 24,
+      "benefit_count": 299,
+      "harm_rate": 0.005427408412483039,
+      "benefit_rate": 0.0676164631388512
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W40",
+      "volume": 3743,
+      "harm_count": 35,
+      "benefit_count": 222,
+      "harm_rate": 0.009350788137857334,
+      "benefit_rate": 0.05931071333155223
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W41",
+      "volume": 3459,
+      "harm_count": 48,
+      "benefit_count": 203,
+      "harm_rate": 0.013876843018213356,
+      "benefit_rate": 0.05868748193119399
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W42",
+      "volume": 2791,
+      "harm_count": 21,
+      "benefit_count": 163,
+      "harm_rate": 0.007524184879971337,
+      "benefit_rate": 0.058402006449301325
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W43",
+      "volume": 5719,
+      "harm_count": 183,
+      "benefit_count": 620,
+      "harm_rate": 0.03199860115404791,
+      "benefit_rate": 0.10841056128693828
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W44",
+      "volume": 3447,
+      "harm_count": 67,
+      "benefit_count": 266,
+      "harm_rate": 0.01943719176095155,
+      "benefit_rate": 0.07716855236437482
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W45",
+      "volume": 4009,
+      "harm_count": 38,
+      "benefit_count": 304,
+      "harm_rate": 0.009478672985781991,
+      "benefit_rate": 0.07582938388625593
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W46",
+      "volume": 3840,
+      "harm_count": 22,
+      "benefit_count": 227,
+      "harm_rate": 0.005729166666666666,
+      "benefit_rate": 0.05911458333333333
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W47",
+      "volume": 5541,
+      "harm_count": 48,
+      "benefit_count": 332,
+      "harm_rate": 0.008662696264212236,
+      "benefit_rate": 0.05991698249413463
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W48",
+      "volume": 2881,
+      "harm_count": 48,
+      "benefit_count": 206,
+      "harm_rate": 0.016660881638320028,
+      "benefit_rate": 0.07150295036445678
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W49",
+      "volume": 3291,
+      "harm_count": 22,
+      "benefit_count": 202,
+      "harm_rate": 0.006684898207231844,
+      "benefit_rate": 0.06137951990276512
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W50",
+      "volume": 6502,
+      "harm_count": 61,
+      "benefit_count": 491,
+      "harm_rate": 0.00938172869886189,
+      "benefit_rate": 0.07551522608428175
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W51",
+      "volume": 6480,
+      "harm_count": 51,
+      "benefit_count": 396,
+      "harm_rate": 0.00787037037037037,
+      "benefit_rate": 0.06111111111111111
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2024-W52",
+      "volume": 8315,
+      "harm_count": 143,
+      "benefit_count": 612,
+      "harm_rate": 0.01719783523752255,
+      "benefit_rate": 0.07360192423331328
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W01",
+      "volume": 3956,
+      "harm_count": 53,
+      "benefit_count": 297,
+      "harm_rate": 0.01339737108190091,
+      "benefit_rate": 0.07507583417593529
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W02",
+      "volume": 10493,
+      "harm_count": 92,
+      "benefit_count": 525,
+      "harm_rate": 0.008767749928523777,
+      "benefit_rate": 0.05003335557038025
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W03",
+      "volume": 6044,
+      "harm_count": 59,
+      "benefit_count": 359,
+      "harm_rate": 0.009761747187293184,
+      "benefit_rate": 0.05939774983454666
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W04",
+      "volume": 3052,
+      "harm_count": 33,
+      "benefit_count": 165,
+      "harm_rate": 0.010812581913499346,
+      "benefit_rate": 0.05406290956749672
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W05",
+      "volume": 2887,
+      "harm_count": 37,
+      "benefit_count": 181,
+      "harm_rate": 0.012816072047107724,
+      "benefit_rate": 0.0626948389331486
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W06",
+      "volume": 2385,
+      "harm_count": 24,
+      "benefit_count": 149,
+      "harm_rate": 0.010062893081761006,
+      "benefit_rate": 0.06247379454926625
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W07",
+      "volume": 2682,
+      "harm_count": 29,
+      "benefit_count": 189,
+      "harm_rate": 0.01081282624906786,
+      "benefit_rate": 0.07046979865771812
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W08",
+      "volume": 2877,
+      "harm_count": 36,
+      "benefit_count": 177,
+      "harm_rate": 0.01251303441084463,
+      "benefit_rate": 0.061522419186652764
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W09",
+      "volume": 2938,
+      "harm_count": 29,
+      "benefit_count": 159,
+      "harm_rate": 0.009870660313138189,
+      "benefit_rate": 0.05411844792375766
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W10",
+      "volume": 2795,
+      "harm_count": 30,
+      "benefit_count": 182,
+      "harm_rate": 0.01073345259391771,
+      "benefit_rate": 0.06511627906976744
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W11",
+      "volume": 2681,
+      "harm_count": 28,
+      "benefit_count": 176,
+      "harm_rate": 0.010443864229765013,
+      "benefit_rate": 0.06564714658709436
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W12",
+      "volume": 2565,
+      "harm_count": 17,
+      "benefit_count": 156,
+      "harm_rate": 0.006627680311890838,
+      "benefit_rate": 0.0608187134502924
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W13",
+      "volume": 2089,
+      "harm_count": 25,
+      "benefit_count": 134,
+      "harm_rate": 0.011967448539971278,
+      "benefit_rate": 0.06414552417424606
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W14",
+      "volume": 1984,
+      "harm_count": 26,
+      "benefit_count": 119,
+      "harm_rate": 0.01310483870967742,
+      "benefit_rate": 0.05997983870967742
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W15",
+      "volume": 1887,
+      "harm_count": 26,
+      "benefit_count": 132,
+      "harm_rate": 0.01377848436671966,
+      "benefit_rate": 0.06995230524642289
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W16",
+      "volume": 3136,
+      "harm_count": 22,
+      "benefit_count": 173,
+      "harm_rate": 0.00701530612244898,
+      "benefit_rate": 0.055165816326530615
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W17",
+      "volume": 8213,
+      "harm_count": 48,
+      "benefit_count": 248,
+      "harm_rate": 0.005844393035431633,
+      "benefit_rate": 0.030196030683063434
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W18",
+      "volume": 2938,
+      "harm_count": 34,
+      "benefit_count": 173,
+      "harm_rate": 0.011572498298162015,
+      "benefit_rate": 0.058883594281824374
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W19",
+      "volume": 2450,
+      "harm_count": 34,
+      "benefit_count": 182,
+      "harm_rate": 0.013877551020408163,
+      "benefit_rate": 0.07428571428571429
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W20",
+      "volume": 3105,
+      "harm_count": 32,
+      "benefit_count": 213,
+      "harm_rate": 0.010305958132045089,
+      "benefit_rate": 0.06859903381642513
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W21",
+      "volume": 2901,
+      "harm_count": 37,
+      "benefit_count": 216,
+      "harm_rate": 0.01275422268183385,
+      "benefit_rate": 0.07445708376421924
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W22",
+      "volume": 4427,
+      "harm_count": 58,
+      "benefit_count": 228,
+      "harm_rate": 0.013101423085611023,
+      "benefit_rate": 0.05150214592274678
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W23",
+      "volume": 2591,
+      "harm_count": 32,
+      "benefit_count": 176,
+      "harm_rate": 0.012350443844075647,
+      "benefit_rate": 0.06792744114241606
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W24",
+      "volume": 5035,
+      "harm_count": 61,
+      "benefit_count": 258,
+      "harm_rate": 0.01211519364448858,
+      "benefit_rate": 0.05124131082423039
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W25",
+      "volume": 3588,
+      "harm_count": 43,
+      "benefit_count": 254,
+      "harm_rate": 0.011984392419175028,
+      "benefit_rate": 0.07079152731326645
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W26",
+      "volume": 3315,
+      "harm_count": 34,
+      "benefit_count": 236,
+      "harm_rate": 0.010256410256410256,
+      "benefit_rate": 0.07119155354449472
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W27",
+      "volume": 3940,
+      "harm_count": 52,
+      "benefit_count": 228,
+      "harm_rate": 0.013197969543147208,
+      "benefit_rate": 0.05786802030456853
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W28",
+      "volume": 3473,
+      "harm_count": 65,
+      "benefit_count": 280,
+      "harm_rate": 0.018715807659084364,
+      "benefit_rate": 0.0806219406852865
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W29",
+      "volume": 4842,
+      "harm_count": 76,
+      "benefit_count": 307,
+      "harm_rate": 0.01569599339116068,
+      "benefit_rate": 0.06340355225113589
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W30",
+      "volume": 3708,
+      "harm_count": 51,
+      "benefit_count": 272,
+      "harm_rate": 0.013754045307443365,
+      "benefit_rate": 0.07335490830636461
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W31",
+      "volume": 4246,
+      "harm_count": 51,
+      "benefit_count": 349,
+      "harm_rate": 0.012011304757418746,
+      "benefit_rate": 0.08219500706547339
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W32",
+      "volume": 3583,
+      "harm_count": 39,
+      "benefit_count": 255,
+      "harm_rate": 0.010884733463578006,
+      "benefit_rate": 0.07116941110801005
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W33",
+      "volume": 3046,
+      "harm_count": 32,
+      "benefit_count": 226,
+      "harm_rate": 0.010505581089954037,
+      "benefit_rate": 0.07419566644780039
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W34",
+      "volume": 3485,
+      "harm_count": 41,
+      "benefit_count": 250,
+      "harm_rate": 0.011764705882352941,
+      "benefit_rate": 0.07173601147776183
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W35",
+      "volume": 3144,
+      "harm_count": 30,
+      "benefit_count": 194,
+      "harm_rate": 0.009541984732824428,
+      "benefit_rate": 0.06170483460559797
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W36",
+      "volume": 2970,
+      "harm_count": 33,
+      "benefit_count": 193,
+      "harm_rate": 0.011111111111111112,
+      "benefit_rate": 0.06498316498316499
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W37",
+      "volume": 2394,
+      "harm_count": 32,
+      "benefit_count": 175,
+      "harm_rate": 0.013366750208855471,
+      "benefit_rate": 0.07309941520467836
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W38",
+      "volume": 2385,
+      "harm_count": 20,
+      "benefit_count": 145,
+      "harm_rate": 0.008385744234800839,
+      "benefit_rate": 0.06079664570230608
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W39",
+      "volume": 2142,
+      "harm_count": 31,
+      "benefit_count": 179,
+      "harm_rate": 0.014472455648926238,
+      "benefit_rate": 0.08356676003734827
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W40",
+      "volume": 2265,
+      "harm_count": 47,
+      "benefit_count": 216,
+      "harm_rate": 0.02075055187637969,
+      "benefit_rate": 0.09536423841059603
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W41",
+      "volume": 3624,
+      "harm_count": 59,
+      "benefit_count": 280,
+      "harm_rate": 0.016280353200883002,
+      "benefit_rate": 0.0772626931567329
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W42",
+      "volume": 2567,
+      "harm_count": 27,
+      "benefit_count": 203,
+      "harm_rate": 0.010518114530580444,
+      "benefit_rate": 0.07908063887806778
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W43",
+      "volume": 2337,
+      "harm_count": 31,
+      "benefit_count": 180,
+      "harm_rate": 0.013264869490800172,
+      "benefit_rate": 0.07702182284980745
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W44",
+      "volume": 2847,
+      "harm_count": 67,
+      "benefit_count": 277,
+      "harm_rate": 0.023533544081489288,
+      "benefit_rate": 0.09729539866526168
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W45",
+      "volume": 2336,
+      "harm_count": 47,
+      "benefit_count": 218,
+      "harm_rate": 0.02011986301369863,
+      "benefit_rate": 0.09332191780821918
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W46",
+      "volume": 1772,
+      "harm_count": 30,
+      "benefit_count": 154,
+      "harm_rate": 0.016930022573363433,
+      "benefit_rate": 0.08690744920993228
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W47",
+      "volume": 2247,
+      "harm_count": 49,
+      "benefit_count": 208,
+      "harm_rate": 0.021806853582554516,
+      "benefit_rate": 0.09256786826880285
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W48",
+      "volume": 2449,
+      "harm_count": 57,
+      "benefit_count": 232,
+      "harm_rate": 0.023274806043282973,
+      "benefit_rate": 0.09473254389546754
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W49",
+      "volume": 2071,
+      "harm_count": 33,
+      "benefit_count": 179,
+      "harm_rate": 0.0159343312409464,
+      "benefit_rate": 0.08643167551907291
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W50",
+      "volume": 1738,
+      "harm_count": 26,
+      "benefit_count": 158,
+      "harm_rate": 0.014959723820483314,
+      "benefit_rate": 0.09090909090909091
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W51",
+      "volume": 1678,
+      "harm_count": 30,
+      "benefit_count": 144,
+      "harm_rate": 0.017878426698450536,
+      "benefit_rate": 0.08581644815256258
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2025-W52",
+      "volume": 2335,
+      "harm_count": 45,
+      "benefit_count": 189,
+      "harm_rate": 0.019271948608137045,
+      "benefit_rate": 0.08094218415417559
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2026-W01",
+      "volume": 975,
+      "harm_count": 18,
+      "benefit_count": 79,
+      "harm_rate": 0.018461538461538463,
+      "benefit_rate": 0.08102564102564103
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2026-W02",
+      "volume": 1738,
+      "harm_count": 29,
+      "benefit_count": 150,
+      "harm_rate": 0.01668584579976985,
+      "benefit_rate": 0.08630609896432681
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2026-W03",
+      "volume": 1738,
+      "harm_count": 21,
+      "benefit_count": 170,
+      "harm_rate": 0.012082853855005753,
+      "benefit_rate": 0.09781357882623705
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2026-W04",
+      "volume": 1800,
+      "harm_count": 20,
+      "benefit_count": 162,
+      "harm_rate": 0.011111111111111112,
+      "benefit_rate": 0.09
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2026-W05",
+      "volume": 1511,
+      "harm_count": 22,
+      "benefit_count": 132,
+      "harm_rate": 0.01455989410986102,
+      "benefit_rate": 0.08735936465916612
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2026-W06",
+      "volume": 1657,
+      "harm_count": 25,
+      "benefit_count": 163,
+      "harm_rate": 0.015087507543753771,
+      "benefit_rate": 0.09837054918527459
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2026-W07",
+      "volume": 2863,
+      "harm_count": 42,
+      "benefit_count": 178,
+      "harm_rate": 0.014669926650366748,
+      "benefit_rate": 0.062172546280125744
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2026-W08",
+      "volume": 1783,
+      "harm_count": 34,
+      "benefit_count": 152,
+      "harm_rate": 0.019068984856982614,
+      "benefit_rate": 0.08524957936062816
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2026-W09",
+      "volume": 4378,
+      "harm_count": 61,
+      "benefit_count": 258,
+      "harm_rate": 0.013933302878026497,
+      "benefit_rate": 0.058931018730013704
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2026-W10",
+      "volume": 1750,
+      "harm_count": 20,
+      "benefit_count": 114,
+      "harm_rate": 0.011428571428571429,
+      "benefit_rate": 0.06514285714285714
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2026-W11",
+      "volume": 2402,
+      "harm_count": 47,
+      "benefit_count": 198,
+      "harm_rate": 0.019567027477102414,
+      "benefit_rate": 0.08243130724396336
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2026-W12",
+      "volume": 4254,
+      "harm_count": 133,
+      "benefit_count": 344,
+      "harm_rate": 0.031264692054536906,
+      "benefit_rate": 0.08086506817113305
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2026-W13",
+      "volume": 2384,
+      "harm_count": 60,
+      "benefit_count": 225,
+      "harm_rate": 0.025167785234899327,
+      "benefit_rate": 0.09437919463087248
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2026-W14",
+      "volume": 2712,
+      "harm_count": 77,
+      "benefit_count": 249,
+      "harm_rate": 0.028392330383480827,
+      "benefit_rate": 0.0918141592920354
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2026-W15",
+      "volume": 2611,
+      "harm_count": 53,
+      "benefit_count": 192,
+      "harm_rate": 0.020298736116430488,
+      "benefit_rate": 0.07353504404442743
+    },
+    {
+      "app": "CharacterAI",
+      "iso_week": "2026-W16",
+      "volume": 1784,
+      "harm_count": 50,
+      "benefit_count": 157,
+      "harm_rate": 0.028026905829596414,
+      "benefit_rate": 0.08800448430493274
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W01",
+      "volume": 40,
+      "harm_count": 0,
+      "benefit_count": 5,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.125
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W31",
+      "volume": 70,
+      "harm_count": 1,
+      "benefit_count": 7,
+      "harm_rate": 0.014285714285714285,
+      "benefit_rate": 0.1
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W32",
+      "volume": 125,
+      "harm_count": 0,
+      "benefit_count": 18,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.144
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W33",
+      "volume": 135,
+      "harm_count": 3,
+      "benefit_count": 12,
+      "harm_rate": 0.022222222222222223,
+      "benefit_rate": 0.08888888888888889
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W34",
+      "volume": 105,
+      "harm_count": 1,
+      "benefit_count": 14,
+      "harm_rate": 0.009523809523809525,
+      "benefit_rate": 0.13333333333333333
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W35",
+      "volume": 119,
+      "harm_count": 3,
+      "benefit_count": 15,
+      "harm_rate": 0.025210084033613446,
+      "benefit_rate": 0.12605042016806722
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W36",
+      "volume": 121,
+      "harm_count": 1,
+      "benefit_count": 20,
+      "harm_rate": 0.008264462809917356,
+      "benefit_rate": 0.1652892561983471
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W37",
+      "volume": 105,
+      "harm_count": 2,
+      "benefit_count": 17,
+      "harm_rate": 0.01904761904761905,
+      "benefit_rate": 0.1619047619047619
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W38",
+      "volume": 145,
+      "harm_count": 0,
+      "benefit_count": 13,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.0896551724137931
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W39",
+      "volume": 129,
+      "harm_count": 0,
+      "benefit_count": 15,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.11627906976744186
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W40",
+      "volume": 130,
+      "harm_count": 3,
+      "benefit_count": 9,
+      "harm_rate": 0.023076923076923078,
+      "benefit_rate": 0.06923076923076923
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W41",
+      "volume": 112,
+      "harm_count": 3,
+      "benefit_count": 15,
+      "harm_rate": 0.026785714285714284,
+      "benefit_rate": 0.13392857142857142
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W42",
+      "volume": 115,
+      "harm_count": 0,
+      "benefit_count": 9,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.0782608695652174
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W43",
+      "volume": 122,
+      "harm_count": 0,
+      "benefit_count": 8,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.06557377049180328
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W44",
+      "volume": 146,
+      "harm_count": 3,
+      "benefit_count": 15,
+      "harm_rate": 0.02054794520547945,
+      "benefit_rate": 0.10273972602739725
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W45",
+      "volume": 127,
+      "harm_count": 3,
+      "benefit_count": 11,
+      "harm_rate": 0.023622047244094488,
+      "benefit_rate": 0.08661417322834646
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W46",
+      "volume": 127,
+      "harm_count": 0,
+      "benefit_count": 19,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.14960629921259844
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W47",
+      "volume": 92,
+      "harm_count": 2,
+      "benefit_count": 8,
+      "harm_rate": 0.021739130434782608,
+      "benefit_rate": 0.08695652173913043
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W48",
+      "volume": 132,
+      "harm_count": 1,
+      "benefit_count": 9,
+      "harm_rate": 0.007575757575757576,
+      "benefit_rate": 0.06818181818181818
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W49",
+      "volume": 110,
+      "harm_count": 2,
+      "benefit_count": 15,
+      "harm_rate": 0.01818181818181818,
+      "benefit_rate": 0.13636363636363635
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W50",
+      "volume": 109,
+      "harm_count": 3,
+      "benefit_count": 12,
+      "harm_rate": 0.027522935779816515,
+      "benefit_rate": 0.11009174311926606
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W51",
+      "volume": 136,
+      "harm_count": 4,
+      "benefit_count": 21,
+      "harm_rate": 0.029411764705882353,
+      "benefit_rate": 0.15441176470588236
+    },
+    {
+      "app": "replika",
+      "iso_week": "2024-W52",
+      "volume": 99,
+      "harm_count": 4,
+      "benefit_count": 11,
+      "harm_rate": 0.04040404040404041,
+      "benefit_rate": 0.1111111111111111
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W01",
+      "volume": 112,
+      "harm_count": 3,
+      "benefit_count": 17,
+      "harm_rate": 0.026785714285714284,
+      "benefit_rate": 0.15178571428571427
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W02",
+      "volume": 98,
+      "harm_count": 2,
+      "benefit_count": 20,
+      "harm_rate": 0.02040816326530612,
+      "benefit_rate": 0.20408163265306123
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W03",
+      "volume": 109,
+      "harm_count": 2,
+      "benefit_count": 15,
+      "harm_rate": 0.01834862385321101,
+      "benefit_rate": 0.13761467889908258
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W04",
+      "volume": 113,
+      "harm_count": 3,
+      "benefit_count": 12,
+      "harm_rate": 0.02654867256637168,
+      "benefit_rate": 0.10619469026548672
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W05",
+      "volume": 206,
+      "harm_count": 1,
+      "benefit_count": 26,
+      "harm_rate": 0.0048543689320388345,
+      "benefit_rate": 0.1262135922330097
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W06",
+      "volume": 144,
+      "harm_count": 2,
+      "benefit_count": 23,
+      "harm_rate": 0.013888888888888888,
+      "benefit_rate": 0.1597222222222222
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W07",
+      "volume": 145,
+      "harm_count": 2,
+      "benefit_count": 17,
+      "harm_rate": 0.013793103448275862,
+      "benefit_rate": 0.11724137931034483
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W08",
+      "volume": 116,
+      "harm_count": 2,
+      "benefit_count": 18,
+      "harm_rate": 0.017241379310344827,
+      "benefit_rate": 0.15517241379310345
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W09",
+      "volume": 114,
+      "harm_count": 1,
+      "benefit_count": 10,
+      "harm_rate": 0.008771929824561403,
+      "benefit_rate": 0.08771929824561403
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W10",
+      "volume": 97,
+      "harm_count": 0,
+      "benefit_count": 22,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.2268041237113402
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W11",
+      "volume": 86,
+      "harm_count": 2,
+      "benefit_count": 13,
+      "harm_rate": 0.023255813953488372,
+      "benefit_rate": 0.1511627906976744
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W12",
+      "volume": 89,
+      "harm_count": 4,
+      "benefit_count": 21,
+      "harm_rate": 0.0449438202247191,
+      "benefit_rate": 0.23595505617977527
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W13",
+      "volume": 88,
+      "harm_count": 5,
+      "benefit_count": 20,
+      "harm_rate": 0.056818181818181816,
+      "benefit_rate": 0.22727272727272727
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W14",
+      "volume": 76,
+      "harm_count": 0,
+      "benefit_count": 14,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.18421052631578946
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W15",
+      "volume": 72,
+      "harm_count": 0,
+      "benefit_count": 10,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.1388888888888889
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W16",
+      "volume": 81,
+      "harm_count": 2,
+      "benefit_count": 11,
+      "harm_rate": 0.024691358024691357,
+      "benefit_rate": 0.13580246913580246
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W17",
+      "volume": 90,
+      "harm_count": 0,
+      "benefit_count": 10,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.1111111111111111
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W18",
+      "volume": 66,
+      "harm_count": 3,
+      "benefit_count": 16,
+      "harm_rate": 0.045454545454545456,
+      "benefit_rate": 0.24242424242424243
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W19",
+      "volume": 97,
+      "harm_count": 3,
+      "benefit_count": 23,
+      "harm_rate": 0.030927835051546393,
+      "benefit_rate": 0.23711340206185566
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W20",
+      "volume": 84,
+      "harm_count": 2,
+      "benefit_count": 17,
+      "harm_rate": 0.023809523809523808,
+      "benefit_rate": 0.20238095238095238
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W21",
+      "volume": 72,
+      "harm_count": 1,
+      "benefit_count": 10,
+      "harm_rate": 0.013888888888888888,
+      "benefit_rate": 0.1388888888888889
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W22",
+      "volume": 95,
+      "harm_count": 2,
+      "benefit_count": 17,
+      "harm_rate": 0.021052631578947368,
+      "benefit_rate": 0.17894736842105263
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W23",
+      "volume": 104,
+      "harm_count": 1,
+      "benefit_count": 23,
+      "harm_rate": 0.009615384615384616,
+      "benefit_rate": 0.22115384615384615
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W24",
+      "volume": 75,
+      "harm_count": 2,
+      "benefit_count": 13,
+      "harm_rate": 0.02666666666666667,
+      "benefit_rate": 0.17333333333333334
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W25",
+      "volume": 108,
+      "harm_count": 2,
+      "benefit_count": 18,
+      "harm_rate": 0.018518518518518517,
+      "benefit_rate": 0.16666666666666666
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W26",
+      "volume": 98,
+      "harm_count": 3,
+      "benefit_count": 12,
+      "harm_rate": 0.030612244897959183,
+      "benefit_rate": 0.12244897959183673
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W27",
+      "volume": 86,
+      "harm_count": 1,
+      "benefit_count": 14,
+      "harm_rate": 0.011627906976744186,
+      "benefit_rate": 0.16279069767441862
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W28",
+      "volume": 90,
+      "harm_count": 3,
+      "benefit_count": 24,
+      "harm_rate": 0.03333333333333333,
+      "benefit_rate": 0.26666666666666666
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W29",
+      "volume": 79,
+      "harm_count": 1,
+      "benefit_count": 15,
+      "harm_rate": 0.012658227848101266,
+      "benefit_rate": 0.189873417721519
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W30",
+      "volume": 107,
+      "harm_count": 3,
+      "benefit_count": 21,
+      "harm_rate": 0.028037383177570093,
+      "benefit_rate": 0.19626168224299065
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W31",
+      "volume": 105,
+      "harm_count": 3,
+      "benefit_count": 22,
+      "harm_rate": 0.02857142857142857,
+      "benefit_rate": 0.20952380952380953
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W32",
+      "volume": 107,
+      "harm_count": 1,
+      "benefit_count": 26,
+      "harm_rate": 0.009345794392523364,
+      "benefit_rate": 0.24299065420560748
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W33",
+      "volume": 102,
+      "harm_count": 1,
+      "benefit_count": 12,
+      "harm_rate": 0.00980392156862745,
+      "benefit_rate": 0.11764705882352941
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W34",
+      "volume": 76,
+      "harm_count": 2,
+      "benefit_count": 12,
+      "harm_rate": 0.02631578947368421,
+      "benefit_rate": 0.15789473684210525
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W35",
+      "volume": 72,
+      "harm_count": 3,
+      "benefit_count": 14,
+      "harm_rate": 0.041666666666666664,
+      "benefit_rate": 0.19444444444444445
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W36",
+      "volume": 72,
+      "harm_count": 3,
+      "benefit_count": 18,
+      "harm_rate": 0.041666666666666664,
+      "benefit_rate": 0.25
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W37",
+      "volume": 61,
+      "harm_count": 4,
+      "benefit_count": 8,
+      "harm_rate": 0.06557377049180328,
+      "benefit_rate": 0.13114754098360656
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W38",
+      "volume": 64,
+      "harm_count": 1,
+      "benefit_count": 4,
+      "harm_rate": 0.015625,
+      "benefit_rate": 0.0625
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W39",
+      "volume": 73,
+      "harm_count": 0,
+      "benefit_count": 8,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.1095890410958904
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W40",
+      "volume": 65,
+      "harm_count": 0,
+      "benefit_count": 9,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.13846153846153847
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W41",
+      "volume": 69,
+      "harm_count": 2,
+      "benefit_count": 13,
+      "harm_rate": 0.028985507246376812,
+      "benefit_rate": 0.18840579710144928
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W42",
+      "volume": 45,
+      "harm_count": 1,
+      "benefit_count": 8,
+      "harm_rate": 0.022222222222222223,
+      "benefit_rate": 0.17777777777777778
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W43",
+      "volume": 88,
+      "harm_count": 2,
+      "benefit_count": 13,
+      "harm_rate": 0.022727272727272728,
+      "benefit_rate": 0.14772727272727273
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W44",
+      "volume": 64,
+      "harm_count": 0,
+      "benefit_count": 6,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.09375
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W45",
+      "volume": 78,
+      "harm_count": 2,
+      "benefit_count": 17,
+      "harm_rate": 0.02564102564102564,
+      "benefit_rate": 0.21794871794871795
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W46",
+      "volume": 63,
+      "harm_count": 1,
+      "benefit_count": 11,
+      "harm_rate": 0.015873015873015872,
+      "benefit_rate": 0.1746031746031746
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W47",
+      "volume": 73,
+      "harm_count": 3,
+      "benefit_count": 10,
+      "harm_rate": 0.0410958904109589,
+      "benefit_rate": 0.136986301369863
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W48",
+      "volume": 68,
+      "harm_count": 2,
+      "benefit_count": 10,
+      "harm_rate": 0.029411764705882353,
+      "benefit_rate": 0.14705882352941177
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W49",
+      "volume": 61,
+      "harm_count": 0,
+      "benefit_count": 10,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.16393442622950818
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W50",
+      "volume": 57,
+      "harm_count": 0,
+      "benefit_count": 5,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.08771929824561403
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W51",
+      "volume": 51,
+      "harm_count": 0,
+      "benefit_count": 6,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.11764705882352941
+    },
+    {
+      "app": "replika",
+      "iso_week": "2025-W52",
+      "volume": 61,
+      "harm_count": 0,
+      "benefit_count": 4,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.06557377049180328
+    },
+    {
+      "app": "replika",
+      "iso_week": "2026-W01",
+      "volume": 44,
+      "harm_count": 1,
+      "benefit_count": 6,
+      "harm_rate": 0.022727272727272728,
+      "benefit_rate": 0.13636363636363635
+    },
+    {
+      "app": "replika",
+      "iso_week": "2026-W02",
+      "volume": 47,
+      "harm_count": 0,
+      "benefit_count": 6,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.1276595744680851
+    },
+    {
+      "app": "replika",
+      "iso_week": "2026-W03",
+      "volume": 49,
+      "harm_count": 1,
+      "benefit_count": 7,
+      "harm_rate": 0.02040816326530612,
+      "benefit_rate": 0.14285714285714285
+    },
+    {
+      "app": "replika",
+      "iso_week": "2026-W04",
+      "volume": 76,
+      "harm_count": 0,
+      "benefit_count": 9,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.11842105263157894
+    },
+    {
+      "app": "replika",
+      "iso_week": "2026-W05",
+      "volume": 48,
+      "harm_count": 0,
+      "benefit_count": 6,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.125
+    },
+    {
+      "app": "replika",
+      "iso_week": "2026-W06",
+      "volume": 41,
+      "harm_count": 1,
+      "benefit_count": 8,
+      "harm_rate": 0.024390243902439025,
+      "benefit_rate": 0.1951219512195122
+    },
+    {
+      "app": "replika",
+      "iso_week": "2026-W07",
+      "volume": 58,
+      "harm_count": 3,
+      "benefit_count": 8,
+      "harm_rate": 0.05172413793103448,
+      "benefit_rate": 0.13793103448275862
+    },
+    {
+      "app": "replika",
+      "iso_week": "2026-W08",
+      "volume": 57,
+      "harm_count": 0,
+      "benefit_count": 9,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.15789473684210525
+    },
+    {
+      "app": "replika",
+      "iso_week": "2026-W09",
+      "volume": 43,
+      "harm_count": 0,
+      "benefit_count": 7,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.16279069767441862
+    },
+    {
+      "app": "replika",
+      "iso_week": "2026-W10",
+      "volume": 49,
+      "harm_count": 0,
+      "benefit_count": 11,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.22448979591836735
+    },
+    {
+      "app": "replika",
+      "iso_week": "2026-W11",
+      "volume": 35,
+      "harm_count": 0,
+      "benefit_count": 9,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.2571428571428571
+    },
+    {
+      "app": "replika",
+      "iso_week": "2026-W12",
+      "volume": 40,
+      "harm_count": 0,
+      "benefit_count": 7,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.175
+    },
+    {
+      "app": "replika",
+      "iso_week": "2026-W13",
+      "volume": 30,
+      "harm_count": 0,
+      "benefit_count": 4,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.13333333333333333
+    },
+    {
+      "app": "replika",
+      "iso_week": "2026-W14",
+      "volume": 40,
+      "harm_count": 0,
+      "benefit_count": 6,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.15
+    },
+    {
+      "app": "replika",
+      "iso_week": "2026-W15",
+      "volume": 32,
+      "harm_count": 0,
+      "benefit_count": 5,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.15625
+    },
+    {
+      "app": "replika",
+      "iso_week": "2026-W16",
+      "volume": 35,
+      "harm_count": 0,
+      "benefit_count": 13,
+      "harm_rate": 0.0,
+      "benefit_rate": 0.37142857142857144
+    }
+  ]
+}

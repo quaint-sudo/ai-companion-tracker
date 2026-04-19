@@ -1,0 +1,37 @@
+[
+  {
+    "date": "2024-10-22",
+    "type": "legal",
+    "app": "Character.AI",
+    "title": "Garcia lawsuit filed",
+    "description": "Mother of a 14-year-old who died by suicide sues Character.AI, alleging the app contributed to her son's death. Filed in U.S. District Court, Florida."
+  },
+  {
+    "date": "2024-11-09",
+    "type": "legal",
+    "app": "Character.AI",
+    "title": "Amended complaint",
+    "description": "Garcia's legal team files an amended complaint adding detail to the original allegations."
+  },
+  {
+    "date": "2024-12-09",
+    "type": "legal",
+    "app": "Character.AI",
+    "title": "Texas lawsuits filed",
+    "description": "Two additional families in Texas sue Character.AI over alleged psychological harm and inappropriate content shown to minors."
+  },
+  {
+    "date": "2024-12-12",
+    "type": "policy",
+    "app": "Character.AI",
+    "title": "Teen safety features",
+    "description": "Character.AI announces a separate under-18 model, parental controls, and content filters, responding to lawsuits and public pressure."
+  },
+  {
+    "date": "2026-01-07",
+    "type": "legal",
+    "app": "Character.AI",
+    "title": "Case settled",
+    "description": "Garcia v. Character Technologies is settled out of court. Terms are not public. Similar settlements reached with related Colorado, New York, and Texas cases."
+  }
+]

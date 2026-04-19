@@ -75,7 +75,7 @@ function initDashboard(data) {
         .reduce((sum, w) => sum + w.harm_rate, 0) / (trailingWeeks.length || 1) * 100).toFixed(2);
 
     // 1. Render Evergreen Header
-    document.getElementById('finding-text').innerHTML = `Harm-language rate in r/CharacterAI, latest complete week (${latestWeek}): <strong>${latestRateCai}%</strong>. Control subreddit r/replika: <strong>${latestRateRep}%</strong>.`;
+    document.getElementById('finding-text').innerHTML = `Harm-language rate in r/CharacterAI, latest complete week (${latestWeek}): <strong>${latestRateCai}%</strong>. Comparison subreddit r/replika: <strong>${latestRateRep}%</strong>.`;
     
     document.getElementById('evergreen-sub-headline').innerText = `This tracker monitors weekly harm-language rate in the primary Reddit communities for Character.AI and Replika. Rates are the share of weekly submissions containing at least one of 13 pre-registered harm-language terms. Observation window begins August 2024. See methodology below.`;
 
@@ -129,7 +129,7 @@ function initDashboard(data) {
                 </div>
             </div>
             <div>
-                <div style="color: #fff; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">r/replika Control</div>
+                <div style="color: #fff; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem;">r/replika Comparison</div>
                 <div style="font-size: 0.95rem; color: #d4d4d8; line-height: 1.4;">
                     Rate that week: <strong>0.00%</strong><br>
                     12-week pre-lawsuit mean: ${(repAverages.pre_harm_rate_mean * 100).toFixed(2)}%<br>
@@ -263,7 +263,7 @@ function initDashboard(data) {
         }
     });
 
-    // CONTROL CHART: Replika
+    // COMPARISON CHART: Replika
     new Chart(document.getElementById('replika-chart'), {
         type: 'line',
         data: {

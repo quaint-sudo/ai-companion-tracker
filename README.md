@@ -1,6 +1,6 @@
 # AI Companion Narrative Shift Tracker
 
-An indicator of harm-language discourse in Reddit communities for Character.AI and Replika. Final project for Harvard Law School, Debates on Frontier AI Governance (Session 16: Relationships, Human Development, and Culture).
+An indicator of harm-language discourse in Reddit communities for Character.AI and Replika. 
 
 ## Live dashboard
 
@@ -35,4 +35,4 @@ All harm and benefit term lists are committed in `scripts/run_pipeline.py`. Raw 
 
 ## Accompanying paper
 
-[Paper title to be added post-submission] — Harvard Law School, Spring 2026.
+[Paper title to be added post-submission] — Spring 2026.

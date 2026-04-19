@@ -27,7 +27,7 @@ To update manually:
   3. python scripts/run_pipeline.py
   4. Commit and push the updated docs/data/reddit_weekly.json
 
-A GitHub Actions workflow at .github/workflows/manual_update.yml runs the same pipeline on demand via the Actions tab. Scheduled updates are not enabled in this version. A cron schedule can be enabled by uncommenting the schedule block in that workflow file.
+A GitHub Actions workflow at .github/workflows/manual_update.yml runs the same pipeline on demand via the Actions tab. The workflow at .github/workflows/manual_update.yml is structured to support scheduled execution. A weekly cron trigger is committed as commented-out YAML and can be enabled by uncommenting three lines. Scheduled updates are intentionally disabled for this submission version.
 
 ## Reproducibility
 

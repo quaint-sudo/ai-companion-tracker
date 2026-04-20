@@ -74,12 +74,16 @@ function initDashboard(data) {
         .filter(w => w.app === "CharacterAI" && trailingWeeks.includes(w.iso_week))
         .reduce((sum, w) => sum + w.harm_rate, 0) / (trailingWeeks.length || 1) * 100).toFixed(2);
 
+    const trailingMeanRep = (weekly
+        .filter(w => w.app === "replika" && trailingWeeks.includes(w.iso_week))
+        .reduce((sum, w) => sum + w.harm_rate, 0) / (trailingWeeks.length || 1) * 100).toFixed(2);
+
     // 1. Render Evergreen Header
-    document.getElementById('finding-text').innerHTML = `Harm-language rate in r/CharacterAI, latest complete week (${latestWeek}): <strong>${latestRateCai}%</strong>. Comparison subreddit r/replika: <strong>${latestRateRep}%</strong>.`;
+    document.getElementById('finding-text').innerHTML = `11-week trailing harm-language rate through ${latestWeek}: r/CharacterAI <strong>${trailingMeanCai}%</strong>. Comparison subreddit r/replika: <strong>${trailingMeanRep}%</strong>.`;
     
     document.getElementById('evergreen-sub-headline').innerText = `This tracker monitors weekly harm-language rate in the primary Reddit communities for Character.AI and Replika. Rates are the share of weekly submissions containing at least one of 13 pre-registered harm-language terms. Observation window begins August 2024. See methodology below.`;
 
-    document.getElementById('evergreen-context').innerHTML = `Across the full observation window, r/CharacterAI harm-language rate has ranged from <strong>${minRateCai}%</strong> to <strong>${maxRateCai}%</strong>, with an 11-week trailing mean of <strong>${trailingMeanCai}%</strong> (mean of the 11 complete weeks preceding the latest complete week).`;
+    document.getElementById('evergreen-context').innerHTML = `Across the full observation window, r/CharacterAI harm-language rate has ranged from <strong>${minRateCai}%</strong> to <strong>${maxRateCai}%</strong>. These trailing means provide a stabilized measure of recent discourse trends.`;
 
     // 2. Render Events Table
     const eventsTableContainer = document.getElementById('events-table-container');

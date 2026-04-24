@@ -3,35 +3,43 @@
     "date": "2024-10-22",
     "type": "legal",
     "app": "Character.AI",
-    "title": "Garcia lawsuit filed",
-    "description": "Mother of a 14-year-old who died by suicide sues Character.AI, alleging the app contributed to her son's death. Filed in U.S. District Court, Florida."
+    "title": "Garcia v. Character Technologies filed",
+    "description": "Wrongful death lawsuit filed in U.S. District Court, Middle District of Florida. Anchor event for this study.",
+    "anchor": true
   },
   {
     "date": "2024-11-09",
     "type": "legal",
     "app": "Character.AI",
-    "title": "Amended complaint",
-    "description": "Garcia's legal team files an amended complaint adding detail to the original allegations."
+    "title": "Amended complaint filed",
+    "description": "Garcia filed amended complaint."
   },
   {
     "date": "2024-12-09",
     "type": "legal",
     "app": "Character.AI",
-    "title": "Texas lawsuits filed",
-    "description": "Two additional families in Texas sue Character.AI over alleged psychological harm and inappropriate content shown to minors."
+    "title": "Additional lawsuits filed in Texas",
+    "description": "Second wrongful death suit and related claims against Character.AI filed by Texas families."
   },
   {
     "date": "2024-12-12",
     "type": "policy",
     "app": "Character.AI",
-    "title": "Teen safety features",
-    "description": "Character.AI announces a separate under-18 model, parental controls, and content filters, responding to lawsuits and public pressure."
+    "title": "Character.AI announces teen safety features",
+    "description": "Announcement of new under-18 model, parental controls, and content moderation, following the Garcia v. Character Technologies filing in October."
+  },
+  {
+    "date": "2025-10-29",
+    "type": "policy",
+    "app": "Character.AI",
+    "title": "Under-18 chat removed",
+    "description": "Character.AI announces removal of open-ended chat for users under 18, effective November 25, 2025. Establishes AI Safety Lab."
   },
   {
     "date": "2026-01-07",
     "type": "legal",
     "app": "Character.AI",
-    "title": "Case settled",
-    "description": "Garcia v. Character Technologies is settled out of court. Terms are not public. Similar settlements reached with related Colorado, New York, and Texas cases."
+    "title": "Case terminated",
+    "description": "Case terminated per CourtListener docket. Reporting indicates settlement."
   }
 ]

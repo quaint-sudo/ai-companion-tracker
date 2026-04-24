@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
   # Scheduled updates are disabled for this version.
   # To enable weekly updates, uncomment:
-  # schedule:
-  #   - cron: '0 12 * * MON'
+  schedule:
+    - cron: '0 12 * * MON'
 
 permissions:
   contents: write

@@ -316,6 +316,14 @@
         "iso_week": "2024-W50"
       },
       {
+        "date": "2025-10-29",
+        "type": "policy",
+        "app": "Character.AI",
+        "title": "Under-18 chat removed",
+        "description": "Character.AI announces removal of open-ended chat for users under 18, effective November 25, 2025. Establishes AI Safety Lab.",
+        "iso_week": "2025-W44"
+      },
+      {
         "date": "2026-01-07",
         "type": "legal",
         "app": "Character.AI",

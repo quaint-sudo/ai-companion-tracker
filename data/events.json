@@ -29,6 +29,13 @@
     "description": "Announcement of new under-18 model, parental controls, and content moderation, following the Garcia v. Character Technologies filing in October."
   },
   {
+    "date": "2025-10-29",
+    "type": "policy",
+    "app": "Character.AI",
+    "title": "Under-18 chat removed",
+    "description": "Character.AI announces removal of open-ended chat for users under 18, effective November 25, 2025. Establishes AI Safety Lab."
+  },
+  {
     "date": "2026-01-07",
     "type": "legal",
     "app": "Character.AI",

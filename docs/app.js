@@ -41,7 +41,9 @@ function initDashboard(data) {
     
     // Helper: Find latest complete week
     const today = new Date();
-    const labels = [...new Set(weekly.map(w => w.iso_week))].sort();
+    const labels = [...new Set(weekly.map(w => w.iso_week))]
+        .filter(lbl => lbl >= "2024-W30") // Filter out anomalous early weeks (e.g. W01)
+        .sort();
     
     function getWeekEndDate(isoStr) {
         const [year, week] = isoStr.split('-W').map(Number);
@@ -158,33 +160,52 @@ function initDashboard(data) {
     const caiVol = extractSeries("CharacterAI", "volume");
     const repHarmRate = extractSeries("replika", "harm_rate");
 
-    // Dynamic Annotations from Metadata
-    const annotationsWithLabels = {};
-    const annotationsNoLabels = {};
-    const yOffsets = [0, 45, 90]; 
-
-    (data.metadata.events || []).forEach((ev, idx) => {
-        const base = {
-            type: 'line',
-            xMin: ev.iso_week,
-            xMax: ev.iso_week,
-            borderColor: ev.type === 'legal' ? '#f87171' : '#60a5fa',
-            borderWidth: 2
-        };
-        annotationsNoLabels[`ev-${idx}`] = { ...base };
-        annotationsWithLabels[`ev-${idx}`] = {
-            ...base,
-            label: {
-                display: true,
-                content: ev.title,
-                position: 'end',
-                yAdjust: yOffsets[idx % 3],
-                backgroundColor: 'rgba(0,0,0,0.8)',
-                padding: 6,
-                font: { family: 'Inter', size: 10, weight: '600' }
-            }
-        };
+    // Group events by ISO week to handle multiple events in the same week
+    const eventsByWeek = {};
+    (data.metadata.events || []).forEach(ev => {
+        if (!eventsByWeek[ev.iso_week]) eventsByWeek[ev.iso_week] = [];
+        eventsByWeek[ev.iso_week].push(ev);
     });
+
+    function getAnnotations(withLabels) {
+        const annotations = {};
+        let eventIdx = 0;
+        const yOffsets = [0, 45, 90];
+
+        Object.keys(eventsByWeek).forEach(week => {
+            const evs = eventsByWeek[week];
+            const isLegal = evs.some(e => e.type === 'legal');
+            
+            const base = {
+                type: 'line',
+                xMin: week,
+                xMax: week,
+                borderColor: isLegal ? '#f87171' : '#60a5fa',
+                borderWidth: 2
+            };
+
+            if (withLabels) {
+                // Combine titles if multiple events in one week
+                const combinedTitle = evs.map(e => e.title).join(' | ');
+                annotations[`ev-${week}`] = {
+                    ...base,
+                    label: {
+                        display: true,
+                        content: combinedTitle,
+                        position: 'end',
+                        yAdjust: yOffsets[eventIdx % 3],
+                        backgroundColor: 'rgba(0,0,0,0.8)',
+                        padding: 6,
+                        font: { family: 'Inter', size: 10, weight: '600' }
+                    }
+                };
+            } else {
+                annotations[`ev-${week}`] = { ...base };
+            }
+            eventIdx++;
+        });
+        return annotations;
+    }
 
     Chart.defaults.color = '#a1a1aa';
     Chart.defaults.font.family = 'Inter';
@@ -235,7 +256,7 @@ function initDashboard(data) {
                 x: { grid: { display: false } }
             },
             plugins: {
-                annotation: { annotations: annotationsWithLabels },
+                annotation: { annotations: getAnnotations(true) },
                 legend: { display: false },
                 tooltip: sharedTooltipOptions
             }
@@ -262,7 +283,7 @@ function initDashboard(data) {
             },
             plugins: {
                 legend: { display: false },
-                annotation: { annotations: annotationsNoLabels }
+                annotation: { annotations: getAnnotations(false) }
             }
         }
     });
@@ -293,7 +314,7 @@ function initDashboard(data) {
                 x: { grid: { display: false } }
             },
             plugins: {
-                annotation: { annotations: annotationsWithLabels },
+                annotation: { annotations: getAnnotations(true) },
                 legend: { display: false },
                 tooltip: sharedTooltipOptions
             }
